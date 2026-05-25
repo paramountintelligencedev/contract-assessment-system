@@ -1,6 +1,8 @@
 from dotenv import load_dotenv
 load_dotenv()
 
+from mangum import Mangum
+
 import logging
 logging.basicConfig(
     level=logging.INFO,
@@ -30,3 +32,5 @@ app.include_router(chat.router, prefix="/api")
 @app.get("/health")
 def health():
     return {"status": "ok"}
+
+handler = Mangum(app)
