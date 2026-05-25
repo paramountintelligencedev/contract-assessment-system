@@ -1,0 +1,296 @@
+MASTER SERVICES AGREEMENT
+
+Between:
+Accenture LLP ("Vendor" or "Accenture")
+161 N. Clark Street, Chicago, IL 60601
+
+And:
+Waters Corporation ("Client" or "Waters")
+34 Maple Street, Milford, MA 01757
+
+Agreement Reference: ACN-WAT-MSA-2026-0019
+Effective Date: May 1, 2026
+Agreement Type: Master Services Agreement
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+RECITALS
+
+WHEREAS, Waters Corporation is a global leader in analytical instruments and life sciences, currently executing a significant acquisition integration program;
+
+WHEREAS, Accenture LLP is a global professional services company with expertise in technology, AI, and digital transformation;
+
+WHEREAS, Waters wishes to engage Accenture to provide professional services on a project-by-project basis as defined in individual Statements of Work issued under this Agreement;
+
+NOW, THEREFORE, in consideration of the mutual covenants and agreements set forth herein, the parties agree as follows:
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ARTICLE 1 — DEFINITIONS
+
+1.1 "Agreement" means this Master Services Agreement together with all Statements of Work and exhibits incorporated herein.
+
+1.2 "Confidential Information" means any information disclosed by one party to the other that is designated as confidential or that reasonably should be understood to be confidential given the nature of the information.
+
+1.3 "Deliverables" means any work product, report, software, documentation, or other material created by Accenture specifically for Waters under a Statement of Work.
+
+1.4 "Effective Date" means May 1, 2026.
+
+1.5 "Intellectual Property Rights" means all patents, copyrights, trademarks, trade secrets, and other proprietary rights.
+
+1.6 "Services" means the professional services to be provided by Accenture under individual Statements of Work issued under this Agreement.
+
+1.7 "Statement of Work" or "SOW" means a written document executed by both parties describing specific services, deliverables, timelines, and fees.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ARTICLE 2 — SERVICES AND STATEMENTS OF WORK
+
+2.1 Accenture shall provide Services as described in individual Statements of Work issued under this Agreement. Each SOW shall be incorporated into and governed by this Agreement.
+
+2.2 In the event of a conflict between the terms of this Agreement and a Statement of Work, the terms of this Agreement shall prevail unless the SOW expressly states otherwise.
+
+2.3 Accenture shall assign personnel with appropriate skills and experience to perform the Services. Changes to key personnel designated in a SOW require written notice to Waters no less than ten (10) business days in advance.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ARTICLE 3 — FEES AND PAYMENT
+
+3.1 Fees
+
+Waters shall pay Accenture the fees set forth in the applicable Statement of Work. All fees are exclusive of applicable taxes.
+
+3.2 Invoicing
+
+Accenture shall issue invoices monthly in arrears for services rendered and expenses incurred in the prior month. Invoices shall include reasonable detail supporting the amounts billed.
+
+3.3 Payment Terms
+
+Waters shall pay undisputed invoices within thirty (30) days of receipt. Waters may withhold payment of disputed amounts provided Waters notifies Accenture in writing of the dispute within fifteen (15) days of invoice receipt, specifying the nature of the dispute and the amount in question.
+
+3.4 Late Payment
+
+Undisputed amounts not paid within thirty (30) days shall accrue interest at the lesser of one and one-half percent (1.5%) per month or the maximum rate permitted by applicable law.
+
+3.5 Expense Reimbursement
+
+Accenture shall be reimbursed for reasonable and documented out-of-pocket expenses incurred in connection with the Services. Expenses shall be governed by the expense policy set out in Exhibit A.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ARTICLE 4 — INTELLECTUAL PROPERTY
+
+4.1 Assignment of Deliverables
+
+Subject to full payment of all fees due under the applicable Statement of Work, Accenture hereby assigns to Waters all right, title, and interest, including all Intellectual Property Rights, in and to all Deliverables created specifically for Waters under this Agreement. This assignment is effective upon full payment without further action required.
+
+4.2 Accenture Pre-Existing IP
+
+Accenture retains all right, title, and interest in and to its pre-existing intellectual property, including proprietary tools, frameworks, methodologies, and reusable code components ("Accenture IP") existing prior to the commencement of any SOW.
+
+4.3 License to Embedded Accenture IP
+
+To the extent any Deliverable incorporates Accenture IP, Accenture grants Waters a perpetual, irrevocable, worldwide, non-exclusive, royalty-free license to use, copy, modify, and distribute such embedded Accenture IP solely as part of the Deliverable and solely for Waters' internal business purposes. This license survives termination of this Agreement.
+
+4.4 Waters Data and IP
+
+Waters retains all right, title, and interest in and to its data, systems, processes, and pre-existing intellectual property. Accenture shall use Waters' data and IP solely to perform the Services and shall not use such information for any other purpose.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ARTICLE 5 — CONFIDENTIALITY
+
+5.1 Mutual Confidentiality Obligations
+
+Each party agrees to: (a) hold the other party's Confidential Information in strict confidence; (b) not disclose Confidential Information to any third party without prior written consent; (c) use Confidential Information only for the purposes of this Agreement; and (d) limit access to Confidential Information to personnel who have a need to know and are bound by confidentiality obligations no less protective than those in this Article.
+
+5.2 Duration
+
+Confidentiality obligations shall survive the termination or expiration of this Agreement for a period of five (5) years.
+
+5.3 Exceptions
+
+Confidentiality obligations do not apply to information that: (a) is or becomes publicly known through no breach of this Agreement; (b) was rightfully known before disclosure without restriction; (c) is rightfully received from a third party without restriction; or (d) is required to be disclosed by law, court order, or regulatory authority, provided that the disclosing party gives prompt written notice and cooperates with the other party in seeking a protective order.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ARTICLE 6 — LIMITATION OF LIABILITY
+
+6.1 Liability Cap
+
+EACH PARTY'S TOTAL CUMULATIVE LIABILITY TO THE OTHER ARISING OUT OF OR RELATED TO THIS AGREEMENT, REGARDLESS OF THE FORM OF ACTION, SHALL NOT EXCEED TWO MILLION DOLLARS ($2,000,000 USD) OR THE TOTAL FEES PAID TO ACCENTURE IN THE TWELVE (12) MONTHS IMMEDIATELY PRECEDING THE EVENT GIVING RISE TO THE CLAIM, WHICHEVER IS GREATER.
+
+6.2 Exclusion of Consequential Damages
+
+IN NO EVENT SHALL EITHER PARTY BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, PUNITIVE, OR CONSEQUENTIAL DAMAGES, INCLUDING LOST PROFITS, LOSS OF DATA, OR BUSINESS INTERRUPTION, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+6.3 Exceptions
+
+The limitations in this Article shall not apply to: (a) indemnification obligations; (b) damages arising from gross negligence or willful misconduct; (c) breaches of confidentiality obligations; or (d) infringement of the other party's intellectual property rights.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ARTICLE 7 — TERM AND TERMINATION
+
+7.1 Term
+
+This Agreement shall commence on the Effective Date and shall continue for an initial term of three (3) years, unless earlier terminated in accordance with this Article. The Agreement shall automatically renew for successive one-year periods unless either party provides written notice of non-renewal at least ninety (90) days before the end of the then-current term.
+
+7.2 Termination for Convenience
+
+Either party may terminate this Agreement or any individual Statement of Work for convenience upon ninety (90) days prior written notice to the other party. Waters may terminate an individual SOW for convenience with thirty (30) days written notice.
+
+7.3 Termination for Material Breach
+
+Either party may terminate this Agreement or any SOW immediately upon written notice if the other party: (a) commits a material breach and fails to cure such breach within fifteen (15) business days of receiving written notice of the breach; or (b) becomes insolvent, makes an assignment for the benefit of creditors, or has a receiver appointed.
+
+7.4 Effect of Termination
+
+Upon termination: (a) Waters shall pay Accenture for all services performed and expenses incurred through the effective date of termination; (b) Accenture shall deliver to Waters all completed and partially completed deliverables; and (c) each party shall return or destroy the other's Confidential Information upon written request.
+
+7.5 Auto-Renewal Notification
+
+Accenture shall provide Waters with written notice of any approaching auto-renewal date no less than one hundred twenty (120) days prior to the renewal date, providing Waters with sufficient time to evaluate and either confirm or opt out of renewal.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ARTICLE 8 — DATA SECURITY
+
+8.1 Security Standards
+
+Accenture shall implement and maintain information security practices and controls that are at least as protective as: (a) ISO/IEC 27001:2022; (b) SOC 2 Type II; and (c) all applicable data protection laws and regulations.
+
+8.2 Encryption
+
+All Waters Confidential Information and data shall be encrypted: (a) in transit using TLS 1.2 or higher; and (b) at rest using AES-256 encryption or equivalent.
+
+8.3 Access Controls
+
+Accenture shall implement role-based access controls ensuring that access to Waters data is limited to personnel who require such access to perform the Services. Accenture shall maintain audit logs of all access to Waters data.
+
+8.4 Breach Notification
+
+In the event of any confirmed or reasonably suspected unauthorized access to, disclosure of, or acquisition of Waters' data or Confidential Information, Accenture shall notify Waters within twenty-four (24) hours of discovery and shall cooperate fully with Waters in any investigation and remediation.
+
+8.5 Security Assessments
+
+Waters shall have the right to conduct or commission security assessments of Accenture's systems and controls as they relate to Waters data, upon reasonable written notice of no less than ten (10) business days.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ARTICLE 9 — SUBCONTRACTING
+
+9.1 Prior Approval Required
+
+Accenture shall not subcontract any material portion of the Services to any third party without Waters' prior written approval, which shall not be unreasonably withheld or delayed. Accenture may engage Accenture affiliated entities without Waters' prior approval, provided Accenture notifies Waters promptly.
+
+9.2 Accenture Responsibility
+
+Accenture shall remain fully liable for the performance of any approved subcontractor to the same extent as if Accenture had performed the services directly. Accenture shall ensure that all subcontractors are bound by confidentiality and data security obligations no less protective than those in this Agreement.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ARTICLE 10 — WARRANTIES
+
+10.1 Service Warranty
+
+Accenture warrants that Services will be performed in a professional and workmanlike manner by personnel with appropriate qualifications and experience.
+
+10.2 Deliverable Warranty
+
+Accenture warrants that Deliverables will materially conform to the specifications set forth in the applicable SOW for a period of ninety (90) days following delivery and acceptance. Waters must notify Accenture of any non-conformance within the warranty period. Accenture's sole obligation is to re-perform or correct the non-conforming Deliverable at no additional cost.
+
+10.3 Compliance Warranty
+
+Accenture warrants that it will comply with all applicable laws and regulations in the performance of Services, including data protection laws, export control regulations, and anti-bribery and anti-corruption laws.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ARTICLE 11 — INSURANCE
+
+Accenture shall maintain the following minimum insurance coverage throughout the term of this Agreement:
+
+Commercial General Liability: $2,000,000 per occurrence / $5,000,000 aggregate
+Professional Liability (E&O): $5,000,000 per claim / $10,000,000 aggregate
+Cyber Liability: $5,000,000 per occurrence
+Workers Compensation: As required by applicable law
+Umbrella/Excess Liability: $10,000,000
+
+Accenture shall provide Waters with certificates of insurance upon request and shall name Waters as an additional insured on the Commercial General Liability policy.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ARTICLE 12 — NON-SOLICITATION
+
+During the term of this Agreement and for a period of twelve (12) months following its termination or expiration, neither party shall directly solicit for employment or hire any employee of the other party who was involved in the delivery or receipt of Services under this Agreement, without the prior written consent of the employing party. General solicitations through public job postings shall not constitute a violation of this Article.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ARTICLE 13 — AUDIT RIGHTS
+
+Waters shall have the right, upon ten (10) business days written notice, to audit Accenture's records and systems related to the performance of this Agreement, including financial records supporting invoiced amounts, compliance with data security requirements, and compliance with confidentiality obligations. Such audits may be conducted by Waters directly or through an appointed independent third party, no more than once per calendar year unless a breach is suspected.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ARTICLE 14 — GOVERNING LAW AND DISPUTE RESOLUTION
+
+14.1 Governing Law
+
+This Agreement shall be governed by and construed in accordance with the laws of the Commonwealth of Massachusetts, without regard to its conflict of laws principles.
+
+14.2 Dispute Resolution
+
+Any dispute arising out of or in connection with this Agreement shall be resolved as follows:
+(a) Good faith negotiation between senior representatives of both parties for thirty (30) days;
+(b) If not resolved, non-binding mediation for thirty (30) days;
+(c) If not resolved, binding arbitration under the rules of the American Arbitration Association;
+(d) Litigation shall be a last resort only.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ARTICLE 15 — GENERAL PROVISIONS
+
+15.1 Entire Agreement. This Agreement constitutes the entire agreement between the parties with respect to the subject matter and supersedes all prior agreements, representations, and understandings.
+
+15.2 Amendments. This Agreement may be amended only by a written instrument signed by authorized representatives of both parties.
+
+15.3 Assignment. Neither party may assign this Agreement without the prior written consent of the other party, except that either party may assign to a successor entity in connection with a merger, acquisition, or sale of substantially all of its assets, upon written notice.
+
+15.4 Force Majeure. Neither party shall be liable for delays caused by circumstances beyond its reasonable control. The affected party shall give prompt notice. If a force majeure event persists for more than sixty (60) days, either party may terminate the affected SOW without penalty.
+
+15.5 Severability. If any provision of this Agreement is found invalid or unenforceable, the remaining provisions shall remain in full force and effect.
+
+15.6 Counterparts. This Agreement may be executed in counterparts, including by electronic signature, each of which shall be deemed an original.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SIGNATURES
+
+ACCENTURE LLP
+
+Signature: _______________________________
+Name: Rebecca L. Thornton
+Title: Managing Director, Technology Services
+Date: ___________________________
+Email: rebecca.thornton@accenture.com
+
+WATERS CORPORATION
+
+Signature: _______________________________
+Name: ___________________________
+Title: ___________________________
+Date: ___________________________
+Email: ___________________________
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+EXHIBIT A — EXPENSE POLICY
+
+Pre-approved expense categories:
+- Air travel: Economy class domestic; Business class for flights over 6 hours
+- Ground transportation: Taxi, rideshare, or rental car at standard rates
+- Hotel: Not to exceed $350/night in major metros
+- Meals: Not to exceed $75/person/day
+- Client entertainment: Requires prior written approval; max $150/person/event
+
+END OF AGREEMENT

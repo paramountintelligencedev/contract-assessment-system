@@ -1,0 +1,282 @@
+MASTER SERVICES AGREEMENT
+
+Between:
+Infosys BPM Limited ("Vendor" or "Infosys")
+Electronics City, Hosur Road, Bangalore, Karnataka 560 100, India
+US Operations: 2300 N. Field St., Suite 1300, Dallas, TX 75201
+
+And:
+Waters Corporation ("Client" or "Waters")
+34 Maple Street, Milford, MA 01757
+
+Agreement Reference: IBPM-WAT-MSA-2026-0007
+Effective Date: May 1, 2026
+Agreement Type: Master Services Agreement
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+RECITALS
+
+WHEREAS, Waters Corporation is a global life sciences and analytical instruments company seeking professional AI and digital transformation services;
+
+WHEREAS, Infosys BPM Limited is a global leader in business process management and technology services with deep expertise in enterprise AI and integration;
+
+WHEREAS, the parties wish to establish a master framework under which Infosys will provide professional services to Waters on a project-by-project basis;
+
+NOW, THEREFORE, the parties agree as follows:
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ARTICLE 1 — DEFINITIONS
+
+1.1 "Agreement" means this Master Services Agreement and all Statements of Work and exhibits issued hereunder.
+
+1.2 "Confidential Information" means any non-public information of a party that is designated as confidential or should reasonably be treated as confidential.
+
+1.3 "Deliverables" means work product created by Infosys for Waters under a Statement of Work.
+
+1.4 "Effective Date" means May 1, 2026.
+
+1.5 "Services" means the professional services provided by Infosys under Statements of Work issued under this Agreement.
+
+1.6 "Statement of Work" or "SOW" means an executed written document describing specific services, deliverables, timelines, and fees.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ARTICLE 2 — SERVICES
+
+2.1 Infosys shall provide Services as described in individual SOWs issued under this Agreement.
+
+2.2 Infosys shall assign qualified personnel to perform Services. Infosys reserves the right to reassign personnel in the ordinary course of managing its workforce, provided that replacements have comparable qualifications.
+
+2.3 Waters acknowledges that Infosys may utilize offshore delivery teams in India and other locations as part of its standard delivery model, which is a core feature of Infosys' cost-competitive service offering.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ARTICLE 3 — FEES AND PAYMENT
+
+3.1 Fees shall be as specified in the applicable Statement of Work.
+
+3.2 Infosys shall issue invoices bi-monthly (every two weeks) for services rendered in the preceding period.
+
+3.3 Payment Terms. Waters shall pay undisputed invoices within thirty (30) days of receipt. Invoices not disputed within twenty (20) days of receipt shall be deemed accepted.
+
+3.4 Late Payment. Overdue amounts shall accrue interest at two percent (2%) per month from the due date until paid.
+
+3.5 Fee Escalation. Infosys may adjust billing rates annually to reflect cost of living adjustments and market rates. Such adjustments shall not exceed eight percent (8%) per year and shall be communicated to Waters sixty (60) days in advance.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ARTICLE 4 — INTELLECTUAL PROPERTY
+
+4.1 Joint Ownership of Deliverables
+
+All Deliverables created by Infosys specifically for Waters under this Agreement shall be jointly owned by Waters and Infosys ("Joint IP"). Each party shall have the right to use, copy, modify, sublicense, and distribute the Joint IP without accounting to or obtaining the consent of the other party.
+
+[RISK FLAG: This is a joint ownership clause, not a full assignment to Waters. Waters does not have exclusive ownership of deliverables. Infosys retains rights to use, sublicense, and distribute the same deliverables — including potentially to Waters' competitors. This falls significantly below Waters' standard which requires full assignment.]
+
+4.2 Infosys Pre-Existing IP
+
+Infosys retains exclusive ownership of all pre-existing IP, proprietary frameworks, tools, methodologies, accelerators, and AI models, including but not limited to its proprietary Infosys Cobalt™ cloud platform, AI and automation frameworks, and industry-specific accelerators.
+
+4.3 License to Embedded Infosys IP
+
+Where Deliverables incorporate Infosys pre-existing IP, Infosys grants Waters a non-exclusive, non-transferable, worldwide license to use such embedded IP solely in connection with the specific Deliverable, for Waters' internal business purposes only, for the duration of this Agreement and for two (2) years following its termination.
+
+[RISK FLAG: The license to embedded Infosys IP expires two years after termination. After that period, Waters may lose the right to use Deliverables that incorporate Infosys IP. Waters standard requires a perpetual, irrevocable license.]
+
+4.4 Waters Data
+
+Waters retains ownership of all its data. Infosys may use Waters data solely to perform the Services.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ARTICLE 5 — CONFIDENTIALITY
+
+5.1 Each party shall protect the other's Confidential Information using at least the same degree of care it uses for its own confidential information, but no less than reasonable care.
+
+5.2 Duration. Confidentiality obligations shall continue for a period of two (2) years following the termination or expiration of this Agreement.
+
+[RISK FLAG: Waters standard requires 5-year post-termination confidentiality. This clause provides only 2 years — significantly below standard.]
+
+5.3 Exceptions. Standard exceptions apply for publicly known information, prior knowledge, third-party disclosure, and legally required disclosure.
+
+5.4 Permitted Disclosure. Infosys may disclose Waters' Confidential Information to its subcontractors and affiliated delivery centers as necessary to perform the Services, provided such parties are bound by confidentiality obligations.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ARTICLE 6 — LIMITATION OF LIABILITY
+
+6.1 Liability Cap
+
+INFOSYS' TOTAL CUMULATIVE LIABILITY TO WATERS ARISING OUT OF OR RELATED TO THIS AGREEMENT SHALL NOT EXCEED FIVE HUNDRED THOUSAND DOLLARS ($500,000 USD).
+
+[RISK FLAG: This is a fixed cap of $500,000 USD — well below Waters' required minimum of $1,000,000. On a large engagement, this cap could be reached quickly and may be inadequate to cover damages from a significant service failure or data breach.]
+
+6.2 Exclusion of Consequential Damages
+
+IN NO EVENT SHALL EITHER PARTY BE LIABLE FOR INDIRECT, INCIDENTAL, SPECIAL, PUNITIVE, OR CONSEQUENTIAL DAMAGES INCLUDING LOST PROFITS, LOSS OF DATA, OR BUSINESS INTERRUPTION.
+
+6.3 No Exceptions
+
+The parties agree that the liability cap in Section 6.1 applies to all claims without exception, including claims for breach of confidentiality, intellectual property infringement, and data breaches.
+
+[RISK FLAG: This clause removes exceptions for data breaches and IP infringement from the liability cap. Waters standard requires that breaches of confidentiality and IP infringement are carved out from liability caps.]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ARTICLE 7 — TERM AND TERMINATION
+
+7.1 Term
+
+This Agreement shall commence on the Effective Date and continue for an initial term of five (5) years. The Agreement shall automatically renew for successive two-year periods unless either party provides written notice of non-renewal at least thirty (30) days prior to the renewal date.
+
+[RISK FLAG: The auto-renewal notice period is only 30 days, and renewal is for 2-year periods. Waters standard requires 60 days advance notice of renewal with a 30-day opt-out window. The combination of short notice and long renewal periods creates risk.]
+
+7.2 Termination for Convenience
+
+Waters may terminate this Agreement or any SOW for convenience upon thirty (30) days written notice. Infosys may terminate this Agreement for convenience upon ninety (90) days written notice.
+
+[NOTE: Termination for convenience by Waters on 30 days notice is favorable to Waters — meets and exceeds Waters' 30-day standard.]
+
+7.3 Termination for Cause
+
+Either party may terminate this Agreement immediately upon written notice if the other party commits a material breach and fails to cure such breach within ten (10) business days of receiving written notice specifying the breach in detail.
+
+[NOTE: 10 business day cure period matches Waters' standard — favorable.]
+
+7.4 Termination Fees
+
+If Waters terminates any SOW for convenience prior to completion, Waters shall pay Infosys a termination fee equal to twenty-five percent (25%) of the remaining fees under the terminated SOW, in addition to fees for services performed through the termination date.
+
+[RISK FLAG: A 25% termination fee on remaining contract value creates a significant financial penalty for Waters exercising its termination for convenience right. On a $4M SOW with $3M remaining, this equals $750,000. Waters standard does not include termination fees for termination for convenience.]
+
+7.5 Auto-Renewal Notice
+
+Infosys will use commercially reasonable efforts to notify Waters of approaching renewal dates but does not guarantee advance notice beyond the 30-day minimum required in Section 7.1.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ARTICLE 8 — DATA SECURITY
+
+8.1 Infosys shall implement security measures consistent with industry standard practices applicable to business process outsourcing services.
+
+8.2 Data Storage. Waters data processed by Infosys may be stored and processed in India, the United States, or other jurisdictions where Infosys operates delivery centers, subject to applicable data protection laws.
+
+[RISK FLAG: Data may be stored in India or other jurisdictions. For a life sciences company, cross-border data transfer may raise regulatory and compliance concerns. No encryption standard is specified.]
+
+8.3 Encryption. Infosys shall use commercially reasonable encryption for Waters data in transit. Encryption at rest will be applied where technically feasible.
+
+[RISK FLAG: "Commercially reasonable" and "where technically feasible" are vague standards. Waters requires AES-256 encryption in transit and at rest as a minimum.]
+
+8.4 Breach Notification. Infosys shall notify Waters of any confirmed data breach affecting Waters' data within seventy-two (72) hours of Infosys' internal confirmation of the breach.
+
+[RISK FLAG: 72-hour notification is below Waters' 24-hour standard.]
+
+8.5 Audit Rights. Waters may request a copy of Infosys' most recent SOC 2 Type II report in lieu of conducting a direct audit of Infosys' systems.
+
+[RISK FLAG: This limits Waters' audit rights to reviewing a report rather than conducting its own audit. Waters standard includes direct audit rights.]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ARTICLE 9 — SUBCONTRACTING
+
+9.1 Infosys may subcontract services to its affiliated delivery centers and pre-approved subcontractors without Waters' prior approval, provided Infosys notifies Waters within thirty (30) days of engaging any new subcontractor.
+
+[RISK FLAG: Infosys can subcontract without prior Waters approval. Waters standard requires prior written approval for material subcontracting.]
+
+9.2 Infosys' Pre-Approved Subcontractor List is set out in Exhibit B and may be updated by Infosys with thirty (30) days written notice to Waters.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ARTICLE 10 — WARRANTIES
+
+10.1 Infosys warrants that Services will be performed in a professional manner by personnel with appropriate skills.
+
+10.2 Deliverable warranty claims must be raised within thirty (30) days of delivery. Infosys' sole remedy obligation is to correct non-conforming deliverables within a commercially reasonable timeframe.
+
+[RISK FLAG: No defined warranty period beyond the 30-day notification window. Waters standard requires a 90-day deliverable warranty.]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ARTICLE 11 — INSURANCE
+
+Infosys shall maintain the following insurance:
+
+Commercial General Liability: $1,000,000 per occurrence / $2,000,000 aggregate
+Professional Liability (E&O): $2,000,000 per claim
+Cyber Liability: $2,000,000 per occurrence
+Workers Compensation: As required by applicable law
+
+[RISK FLAG: Cyber liability is $2M — significantly below Waters' required $5M minimum. Professional liability is also below Waters' preferred $5M.]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ARTICLE 12 — NON-SOLICITATION
+
+During the term of this Agreement and for a period of six (6) months following termination, neither party shall directly solicit the other's employees who were involved in this engagement.
+
+[RISK FLAG: 6 months post-termination — below Waters' standard of 12 months.]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ARTICLE 13 — GOVERNING LAW
+
+This Agreement shall be governed by the laws of the State of Delaware. Disputes shall be subject to the exclusive jurisdiction of the courts of the State of Delaware.
+
+[RISK FLAG: Delaware governing law is not Waters' preferred Massachusetts jurisdiction. No mediation or arbitration step before litigation.]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ARTICLE 14 — GENERAL PROVISIONS
+
+14.1 Entire Agreement. This Agreement constitutes the entire agreement between the parties.
+
+14.2 Amendments. Amendments must be in writing and signed by authorized representatives of both parties.
+
+14.3 Assignment. Infosys may assign this Agreement to any affiliate or in connection with a corporate reorganization without Waters' consent.
+
+14.4 Force Majeure. Standard force majeure provisions apply. If a force majeure event continues for more than one hundred twenty (120) days, Infosys may terminate without penalty.
+
+[NOTE: 120-day threshold is longer than Waters standard and gives more protection to Infosys than Waters in a prolonged force majeure event.]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SIGNATURES
+
+INFOSYS BPM LIMITED
+
+Signature: _______________________________
+Name: Rajesh K. Narayanan
+Title: Senior Vice President, Global Client Services
+Date: ___________________________
+Email: rajesh.narayanan@infosys.com
+
+WATERS CORPORATION
+
+Signature: _______________________________
+Name: ___________________________
+Title: ___________________________
+Date: ___________________________
+Email: ___________________________
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+EXHIBIT A — EXPENSE POLICY
+
+Pre-approved expense categories subject to per-diem limits:
+- Business class air travel permitted for all international travel and domestic flights over 3 hours
+- Hotel: not to exceed $400/night
+- Meals: not to exceed $100/person/day
+- Client entertainment: not to exceed $200/person/event
+
+EXHIBIT B — PRE-APPROVED SUBCONTRACTORS
+
+- Infosys Limited (parent entity)
+- Infosys BPO Limited
+- EdgeVerve Systems Limited (Infosys subsidiary)
+- Panaya Ltd (Infosys subsidiary)
+- Kaleidoscope Innovation (Infosys subsidiary)
+- Selected third-party staffing agencies as notified to Waters from time to time
+
+END OF AGREEMENT

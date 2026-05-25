@@ -1,0 +1,1870 @@
+STATEMENT OF WORK
+Professional Services Agreement — AI Integration and Digital Transformation Program
+Phase 1: Discovery, Design, and Initial Build
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Prepared by:         Deloitte Consulting LLP
+                     30 Rockefeller Plaza
+                     New York, NY 10112
+                     United States of America
+                     Tel: +1 (212) 492-4000
+
+Prepared for:        Waters Corporation
+                     34 Maple Street
+                     Milford, MA 01757
+                     United States of America
+
+Document Reference:  DC-WATERS-2026-SOW-0042
+Version:             3.1 — Final for Client Signature
+Classification:      Confidential — For Authorized Waters Personnel Only
+Prepared by:         Jonathan R. Whitfield, Managing Director
+Reviewed by:         Sarah M. Chen, Engagement Manager
+                     David K. Park, AI Strategy Lead
+Date of Issue:       April 14, 2026
+Supersedes:          DC-WATERS-2026-SOW-0042 v2.4 dated March 28, 2026
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+DOCUMENT CONTROL AND REVISION HISTORY
+
+Version 1.0 — February 12, 2026
+Initial draft following preliminary scoping discussions with Waters CIO Brook Colangelo and PMO Lead Seth Bachman. High-level scope only. Not for client distribution.
+
+Version 1.5 — February 28, 2026
+Revised following internal Deloitte review. Added workstream detail for CLM and Financial Reporting. Fee estimates added as ranges pending further scoping.
+
+Version 2.0 — March 7, 2026
+Issued to Waters for initial review. First client-facing draft. Incorporated feedback from Waters IT Architecture team on system landscape.
+
+Version 2.1 — March 14, 2026
+Revised following Waters review comments. Adjusted timeline from 12 months to 9 months per Waters' request. Added App Rationalization advisory workstream. Removed cybersecurity workstream pending separate engagement.
+
+Version 2.3 — March 21, 2026
+Incorporated legal comments from both parties. Liability and IP sections revised. Added Exhibit C (Key Personnel) and Exhibit D (Approved Subcontractors).
+
+Version 2.4 — March 28, 2026
+Fee estimates finalized. Travel expense policy added as Exhibit A. Deliverable acceptance criteria expanded. PMO workstream budget increased to reflect expanded governance requirements.
+
+Version 3.0 — April 7, 2026
+Near-final version issued for Waters executive review. Minor legal redlines incorporated. Payment terms revised from Net 30 to Net 45 per Deloitte standard commercial terms.
+
+Version 3.1 — April 14, 2026
+Final version incorporating remaining Waters comments on deliverable timelines. Ready for signature. Change: Extended D-008 (CLM Tool Configuration) timeline from Month 6 to Month 7 per mutual agreement.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TABLE OF CONTENTS
+
+SECTION 1    Executive Summary and Strategic Context
+SECTION 2    Background and Business Context
+SECTION 3    Objectives and Success Criteria
+SECTION 4    Scope of Services — Detailed
+SECTION 5    Deliverables — Detailed Specifications
+SECTION 6    Project Methodology — Deloitte Accelerate AI™
+SECTION 7    Project Governance and Operating Model
+SECTION 8    Timeline, Milestones, and Phase Gates
+SECTION 9    Assumptions and Constraints
+SECTION 10   Dependencies and Predecessor Activities
+SECTION 11   Risks and Mitigation Strategies
+SECTION 12   Roles and Responsibilities — RACI
+SECTION 13   Staffing Plan and Resource Profiles
+SECTION 14   Fees, Billing Rates, and Payment Terms
+SECTION 15   Intellectual Property
+SECTION 16   Confidentiality and Data Protection
+SECTION 17   Limitation of Liability
+SECTION 18   Termination
+SECTION 19   Data Security and Compliance
+SECTION 20   Subcontracting
+SECTION 21   Warranties and Quality Assurance
+SECTION 22   Governing Law and Dispute Resolution
+SECTION 23   Insurance Requirements
+SECTION 24   General Terms and Conditions
+SECTION 25   Signatures
+
+EXHIBITS
+Exhibit A    Expense Reimbursement Policy
+Exhibit B    Deliverable Acceptance Process
+Exhibit C    Key Personnel Profiles
+Exhibit D    Approved Subcontractors
+Exhibit E    Waters Technology Landscape Summary
+Exhibit F    Change Order Process and Template
+Exhibit G    Meeting Cadence and Reporting Calendar
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 1 — EXECUTIVE SUMMARY AND STRATEGIC CONTEXT
+
+1.1 Purpose of This Document
+
+This Statement of Work ("SOW") sets forth the terms, conditions, scope, deliverables, fees, and responsibilities under which Deloitte Consulting LLP ("Deloitte") will provide professional services to Waters Corporation ("Waters" or "Client") in connection with the AI Integration and Digital Transformation Program ("Program" or "the Engagement").
+
+This SOW is entered into under and is governed by the Master Professional Services Agreement between Deloitte Consulting LLP and Waters Corporation dated January 15, 2026 ("MPSA"). In the event of a conflict between this SOW and the MPSA, the terms of the MPSA shall govern unless this SOW expressly and specifically states an intent to override a specific MPSA provision.
+
+1.2 The Strategic Moment
+
+Waters Corporation stands at an inflection point. The acquisition of certain Becton Dickinson Biosciences assets ("BD Assets") represents the largest and most complex transaction in Waters' corporate history. The combined entity must absorb approximately 8,500 additional employees, rationalize a combined application portfolio of over 1,200 systems, harmonize financial reporting across two distinct heritage environments, process an estimated 500 vendor contract novations, and exit all Transition Services Agreements ("TSAs") within 18 months — all while maintaining Waters' premium quality standards and delivering on a committed $290 million synergy target by Year 3.
+
+These demands cannot be met at the pace or scale required through traditional manual approaches. Waters' Chief Information Officer, Brook Colangelo, has made a commitment to the Board of Directors that artificial intelligence will lead and accelerate this integration — not as an experiment or a pilot, but as the primary operating mechanism for the most demanding integration workstreams.
+
+This Program is the first and most critical step in that commitment.
+
+1.3 Deloitte's Perspective on the Opportunity
+
+Deloitte has delivered AI-led integration programs for seven life sciences and industrial technology companies over the past three years, including two programs of comparable scale and complexity. From this experience, we have identified three characteristics that determine whether AI-led integrations succeed or fail at the speed required:
+
+First, the quality and speed of the first AI win. Organizations that demonstrate a measurable AI result within the first four weeks build the organizational confidence and executive momentum required to sustain the program through the harder, more complex workstreams that follow. Programs that spend the first 60 to 90 days in strategy and governance design without a visible outcome typically stall.
+
+Second, the presence of a shared AI platform and operating model before scale. Organizations that allow individual workstreams to procure and deploy AI tools independently create technical debt, governance gaps, security vulnerabilities, and integration complexity that ultimately slows the program. A shared AI Engine — a common platform, governance framework, and operating model — is not overhead; it is the infrastructure that makes speed possible.
+
+Third, the integration of change management into technical delivery from day one. AI deployments that treat change management as a downstream activity consistently underperform. Users who do not understand what the AI is doing, cannot see how it benefits them, and do not trust its outputs will find ways to work around it. AI that is technically correct but organizationally unused delivers no value.
+
+Deloitte's approach to this Program is designed around these three principles. We begin with a visible, measurable first win in Week 2. We build the shared AI Engine in parallel. And we embed change management at every step of the technical delivery.
+
+1.4 Summary of Program Structure
+
+This SOW covers Phase 1 of a multi-phase program. Phase 1 encompasses nine months of discovery, design, configuration, testing, and go-live support across four workstreams:
+
+Workstream 1: AI Strategy and Governance Design
+Workstream 2: Contract Lifecycle Management AI Program
+Workstream 3: Financial Reporting Harmonization
+Workstream 4: Application Rationalization Advisory
+
+Supporting all four workstreams is the AI Engine — a shared program infrastructure covering architecture and platform design, data and retrieval engineering, AI governance, value and financial management, change and adoption, and program management.
+
+1.5 Total Program Investment
+
+Total estimated fees for Phase 1: $4,750,000 USD (not-to-exceed)
+Estimated expenses (not included in fees): up to 8% of total fees
+Total not-to-exceed investment: $5,130,000 USD
+Program duration: 9 months
+Effective Date: May 1, 2026
+Program End Date: January 31, 2027
+
+Phase 2 and Phase 3 (full production build, scale, and managed operations) will be governed by separate Statements of Work to be negotiated following completion of Phase 1. Deloitte estimates Phase 2 investment in the range of $6M to $9M based on current scope understanding, subject to refinement following Phase 1 discovery.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 2 — BACKGROUND AND BUSINESS CONTEXT
+
+2.1 Waters Corporation — Company Overview
+
+Waters Corporation (NYSE: WAT) was founded in 1958 and is headquartered in Milford, Massachusetts. Waters is a global leader in analytical instruments, software, and services for laboratory and industrial applications. The company serves customers in pharmaceutical, life sciences, food safety, environmental, and chemical industries across more than 100 countries.
+
+Key financial and operational metrics:
+- Annual revenue: approximately $3.1 billion (FY2025)
+- Number of employees (legacy Waters): approximately 7,500
+- Global office and laboratory locations: 58
+- Key product lines: HPLC and UPLC systems, mass spectrometry, laboratory informatics, software services
+- Key geographies: North America (38%), Europe (32%), Asia Pacific (24%), Rest of World (6%)
+- R&D investment: approximately $220 million annually
+- Number of active software systems (legacy Waters): approximately 520
+
+2.2 The Becton Dickinson Asset Acquisition
+
+On October 31, 2025, Waters completed the acquisition of certain Biosciences and Diagnostic Solutions assets from Becton Dickinson and Company ("BD") for a total consideration of approximately $17.1 billion. The acquired assets comprise BD's flow cytometry, cell sorting, genomics, and laboratory diagnostics businesses.
+
+The acquisition significantly expands Waters' addressable market, adding capabilities in cellular biology, genomics, and diagnostics to Waters' existing strength in analytical chemistry and mass spectrometry. The combined entity will be a comprehensive life sciences tools company serving the full spectrum of drug discovery, development, and diagnostic applications.
+
+Acquired asset profile:
+- BD employees joining Waters: approximately 8,500 (across 34 countries)
+- BD facilities: 22 manufacturing sites, 67 office locations
+- BD software applications in scope: approximately 680 (of which approximately 520 are candidates for rationalization)
+- BD vendor contracts requiring novation: approximately 480
+- BD annual IT spend: approximately $340 million
+- BD ERP platform: SAP ECC 6.0 (migration to S/4HANA planned for 2027)
+- BD CRM platform: Salesforce
+- BD HR platform: Workday (Waters uses SuccessFactors — platform consolidation TBD)
+
+2.3 Integration Complexity and Urgency
+
+The integration presents challenges of exceptional complexity across multiple dimensions:
+
+TSA Obligations and Timeline Pressure
+Waters has entered into Transition Services Agreements with BD for a range of shared services including IT infrastructure, finance, HR, and supply chain. TSA fees are significant — estimated at $28 million per month — and Waters is contractually obligated to exit all TSAs within 18 months of closing (by April 30, 2027). Each month of delay in TSA exit represents approximately $28 million in avoidable cost. The financial pressure to exit TSAs on time is severe.
+
+Application Rationalization at Unprecedented Scale
+The combined application portfolio of approximately 1,200 systems must be reduced to approximately 500 systems through a kill/keep/clone/retire analysis. Each application retirement requires vendor contract novation or termination, dependency mapping, data migration, user transition, and decommissioning. At the current manual pace, the application rationalization team estimates it takes approximately 8 weeks to complete one full analysis cycle across the active portfolio. This pace is incompatible with TSA exit timelines.
+
+Contract Novation Volume
+Approximately 480 BD vendor contracts must be formally novated — transferred from BD to Waters — as part of the integration. The novation process for each contract involves legal review, vendor notification, bilateral execution, change impact analysis, and system updates. The procurement and legal teams are not scaled to process this volume within the required timeframe using manual methods.
+
+Financial Reporting Fragmentation
+The combined entity has two distinct heritage financial environments. Waters uses Oracle Financials with a Waters-specific chart of accounts, SKU hierarchy, and revenue recognition methodology. BD uses SAP ECC 6.0 with entirely different structures. The CFO and SLT currently have no consolidated view of the combined entity's financial performance. Investors and analysts are tracking a $290 million revenue synergy commitment that requires clean, consolidated reporting to validate.
+
+Dual HR Systems and Employee Experience
+The combined workforce of approximately 16,000 employees is navigating two HR systems (SuccessFactors and Workday), two benefits structures, two payroll systems, two sets of HR policies, and two organizational hierarchies. The HR service desk is experiencing a surge in tickets from employees seeking guidance on benefits, payroll transitions, org reporting, and policy changes. The HR team does not have capacity to handle this volume manually.
+
+2.4 The AI Imperative
+
+Waters CIO Brook Colangelo has made a public commitment, supported by the Board of Directors, that AI will be the primary mechanism for accelerating the integration. This commitment reflects a recognition that traditional integration approaches — which rely on headcount scaling and manual process — cannot deliver the speed and scale required within the TSA timeline.
+
+The commitment to AI also reflects an opportunity that goes beyond the integration itself. The discipline, tooling, and organizational capability built during the integration can become the foundation of a permanent AI-native operating model for the combined Waters. The integration is the forcing function that creates the conditions — urgency, data, organizational motivation, executive mandate — that make rapid AI adoption possible.
+
+Waters has made initial platform decisions:
+- Selected Anthropic Claude as the primary LLM for enterprise AI deployment
+- Security review of Claude API deployment completed and approved by CISO
+- Initial AI Guild established under the leadership of Hari Patel, Director of Digital Innovation
+- Microsoft Azure selected as primary cloud infrastructure platform (with existing enterprise agreement)
+
+These decisions create a strong starting point. The challenge is moving from platform selection and early guild experimentation to production-grade AI deployment at the scale and pace the integration requires.
+
+2.5 Waters' Relationship with Deloitte
+
+Deloitte has served as a strategic advisor to Waters for the past seven years across multiple engagements including the 2021 Oracle Financials upgrade, the 2023 SuccessFactors global rollout, and ongoing cybersecurity advisory services. Deloitte has an established understanding of Waters' technology landscape, governance culture, and key stakeholder relationships.
+
+Deloitte's AI practice has grown significantly over the past three years. The firm's AI and Data practice now comprises over 12,000 practitioners globally, with dedicated industry teams for life sciences, industrial, and financial services. Deloitte has completed AI-led integration programs for two comparable life sciences transactions in the past 24 months and brings direct reference experience to this engagement.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 3 — OBJECTIVES AND SUCCESS CRITERIA
+
+3.1 Program Objectives
+
+The AI Integration and Digital Transformation Program has the following primary objectives:
+
+Objective 1 — Accelerate Integration Execution
+Compress integration timelines across the four priority workstreams (contracts, reporting, applications, HR) through AI-augmented workflows, reducing manual labor requirements and cycle times.
+
+Objective 2 — Protect TSA Exit Windows
+Ensure that AI-accelerated workstream execution enables Waters to exit TSAs on schedule, avoiding avoidable TSA fees and meeting contractual obligations.
+
+Objective 3 — Demonstrate AI Value Quickly
+Deliver visible, measurable AI results within the first four weeks of the program, building organizational confidence and executive momentum.
+
+Objective 4 — Build Durable AI Capability
+Establish the AI Engine — platform, governance, and operating model — that will serve as the foundation for Waters' long-term AI-native operating model beyond the integration.
+
+Objective 5 — Deliver Measurable Financial Value
+Quantify and track the financial value delivered by AI across all workstreams, building the business case for Phase 2 and ongoing AI investment.
+
+3.2 Program-Level Success Criteria
+
+The following program-level success criteria will be used to evaluate the overall success of Phase 1:
+
+SC-001: At least one AI use case in production by end of Week 4, with measurable ticket deflection or processing acceleration demonstrated.
+
+SC-002: Contract processing capability operational for at least 20 contracts by end of Month 5, with cycle time compression of at least 40% versus manual baseline.
+
+SC-003: Financial reporting AI layer live for at least one business unit by end of Month 8, with close cycle compressed by at least 3 days.
+
+SC-004: Application rationalization AI advisory framework operational and applied to at least 50 applications by end of Month 8.
+
+SC-005: AI Engine operational with all seven components staffed and functional by end of Month 3.
+
+SC-006: Waters AI governance framework published and adopted by all workstream leads by end of Month 4.
+
+SC-007: Net Promoter Score from Waters program stakeholders of at least +25 at program midpoint review.
+
+SC-008: Financial value realization of at least $2 million in documented savings or value by end of Phase 1.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 4 — SCOPE OF SERVICES — DETAILED
+
+4.1 Workstream 1 — AI Strategy and Governance Design
+
+4.1.1 Overview and Rationale
+The AI Strategy and Governance workstream establishes the foundation upon which all other workstreams operate. Without a clear AI strategy, a functioning governance model, and a shared understanding of the AI platform architecture, individual workstreams will make inconsistent decisions, create technical debt, and generate governance gaps that create risk. This workstream runs in parallel with early delivery workstreams and must be substantially complete by end of Month 4 to enable scaling.
+
+4.1.2 AI Maturity Assessment
+Deloitte will conduct a comprehensive assessment of Waters' current AI maturity across both legacy Waters and BD, covering the following dimensions:
+
+Strategy and Vision: Clarity of AI strategy, executive alignment, investment commitment, and link to business objectives.
+
+Data Readiness: Quality, accessibility, governance, and documentation of the data assets required to support AI use cases across the integration.
+
+Technology and Platform: Current AI tools and platforms in use across the organization, cloud infrastructure readiness, API and integration capabilities, and security posture.
+
+Talent and Organization: Current AI skills across the Waters AI Guild, IT organization, and business units. Gap analysis versus requirements for identified use cases.
+
+Governance and Risk: Existing AI governance mechanisms, risk frameworks, ethical AI policies, and compliance requirements relevant to life sciences.
+
+Culture and Adoption: Organizational readiness for AI adoption, level of leadership sponsorship, employee sentiment, and historical patterns of technology adoption.
+
+The maturity assessment will be conducted through:
+- 35 to 45 structured stakeholder interviews (Waters and BD personnel) using Deloitte's standardized AI Maturity Interview Protocol
+- Review of existing documentation including IT architecture documents, data governance policies, AI-related vendor contracts, and current AI tool usage
+- Technical architecture review sessions with Waters IT Architecture team (minimum 4 sessions)
+- Data landscape review sessions with Waters Data and Analytics team (minimum 3 sessions)
+- Survey of approximately 200 Waters and BD employees across business functions to assess AI sentiment and readiness
+
+Output: AI Maturity Assessment Report (D-001) and accompanying AI Opportunity Map (D-001a)
+
+4.1.3 AI Governance Framework Design
+Deloitte will design and document a comprehensive AI governance framework for Waters covering:
+
+AI Use Case Governance: Process for identifying, evaluating, prioritizing, and approving AI use cases including risk assessment criteria, data readiness requirements, ethical review, and business case thresholds.
+
+AI Model Governance: Standards for model selection, fine-tuning approval, prompt governance, output monitoring, hallucination auditing, and model versioning. Specific attention to large language model governance given Waters' Claude deployment.
+
+AI Data Governance: Standards for data quality, data classification, data ingestion into AI systems, PII handling, and data retention for AI-processed content.
+
+AI Vendor and Tooling Governance: Decision framework for selecting AI vendors and tools. Policy on AI tool proliferation, shadow AI, and employee use of consumer AI tools (e.g., ChatGPT, Copilot). Standards for evaluating and onboarding new AI tools.
+
+AI Risk and Compliance: Risk taxonomy for AI-related risks including hallucination risk, bias risk, data privacy risk, security risk, and regulatory risk. Escalation and incident management procedures for AI failures. Compliance mapping to relevant regulations including GDPR, CCPA, and FDA guidance on AI in life sciences.
+
+AI Ethics Policy: Ethical principles for AI use at Waters, including transparency requirements, human oversight standards, prohibited use cases, and accountability framework.
+
+The framework will be designed through a series of governance design workshops with Waters stakeholders:
+- Workshop 1: AI risk and compliance requirements (Waters Legal, Compliance, and IT Security)
+- Workshop 2: AI use case governance and prioritization framework (Waters CIO, PMO, and Business Unit leads)
+- Workshop 3: AI model and data governance standards (Waters IT Architecture and Data teams)
+- Workshop 4: AI ethics policy and organizational accountability (Waters CIO, CHRO, and Legal)
+
+Output: AI Governance Framework (D-002), AI Ethics Policy (D-002a), AI Risk Register (D-002b)
+
+4.1.4 AI Vendor and Tooling Recommendation
+Building on Waters' initial platform decisions (Claude as primary LLM, Azure as cloud infrastructure), Deloitte will conduct a structured evaluation of the additional AI tooling required to deliver the program, including:
+
+Orchestration and Agent Frameworks: Evaluation of leading agent orchestration frameworks (LangChain, AutoGen, CrewAI, custom) against Waters' requirements for the integration use cases.
+
+Vector Database and Retrieval Infrastructure: Evaluation of vector database options (Azure AI Search, Pinecone, Weaviate, Chroma) for the RAG architecture required across contract and HR use cases.
+
+Document Ingestion and Processing: Evaluation of document processing pipelines for large-scale contract and policy document ingestion (Azure Document Intelligence, Unstructured.io, custom).
+
+AI Monitoring and Observability: Evaluation of AI output monitoring and observability tools (Arize, Weights and Biases, LangSmith, Datadog AI monitoring) for production governance.
+
+Workflow and Human-in-the-Loop: Evaluation of workflow orchestration tools for human review and approval workflows (Power Automate, Camunda, custom) compatible with Waters' existing Microsoft environment.
+
+The evaluation will be structured as a weighted scoring matrix against criteria defined with Waters, covering: technical capability, security and compliance, cost, vendor stability, integration complexity, Waters existing licensing, and alignment with Claude/Azure ecosystem.
+
+Output: AI Vendor and Tooling Recommendation Report (D-003), including implementation roadmap and total cost of ownership analysis for recommended stack.
+
+4.1.5 AI Center of Excellence Design
+Deloitte will design the operating model for Waters' AI Center of Excellence ("AI CoE"), which will serve as the permanent home for Waters' AI capability beyond the integration program. The AI CoE design will cover:
+
+Mission and Scope: Definition of the AI CoE's mandate, scope of authority, and relationship to business units and IT.
+
+Organizational Structure: Recommended org structure including leadership roles (AI CoE Director, AI Platform Lead, AI Governance Lead, AI Product Managers, AI Engineers, Data Engineers, Change Management Lead). Role profiles for each position.
+
+Talent Strategy: Assessment of current Waters AI Guild capability versus AI CoE requirements. Recommendations for internal talent development, external hiring, and strategic partnerships. Training curriculum for AI Guild members.
+
+Operating Model: How the AI CoE will interact with business units to identify, prioritize, fund, and deliver AI use cases. Budget model for AI CoE operations. Demand management process.
+
+Platform Ownership: AI CoE's role in managing the shared AI Engine platform, including vendor relationships, API key management, cost governance, and security.
+
+Metrics and Value Tracking: How the AI CoE will measure and report on AI program performance including use case throughput, value realized, adoption metrics, and governance compliance.
+
+Transition from Engagement: Plan for transferring Deloitte-supported capabilities to Waters' internal AI CoE over the course of Phase 2 and Phase 3.
+
+Output: AI Center of Excellence Design (D-004), including organizational blueprint, role profiles, and 12-month standup roadmap.
+
+4.2 Workstream 2 — Contract Lifecycle Management AI Program
+
+4.2.1 Overview and Business Problem
+The Contract Lifecycle Management workstream addresses one of the most acute and time-sensitive integration challenges Waters faces. Approximately 480 BD vendor contracts must be novated — formally transferred from BD to Waters — as part of the integration. Additionally, Waters' own procurement function is managing an elevated volume of new vendor contracts and contract renewals driven by the integration.
+
+The current state is manual and email-based. There is no contract lifecycle management (CLM) system in place. Contracts are stored across SharePoint folders, email attachments, and local drives. There is no systematic process for tracking contract status, novation progress, or downstream system dependencies. Legal review is manual and operates as a bottleneck. Procurement cycle times currently range from 4 to 16 weeks per contract depending on complexity.
+
+The financial stakes of this situation are direct: vendor contract novations that are delayed create TSA exit risks, because applications cannot be decommissioned until their underlying vendor contracts are resolved. Every week of delay in the novation process is a potential week of TSA fee exposure.
+
+4.2.2 CLM Current State Assessment
+Deloitte will conduct a comprehensive current state assessment of Waters' contract management processes, covering:
+
+Process Mapping: Detailed process maps for the full contract lifecycle as currently practiced at Waters and BD, including contract initiation, review, approval, execution, storage, renewal management, and termination. Swim-lane diagrams showing the roles of Procurement, Legal, IT, Finance, and Business Unit stakeholders.
+
+Contract Repository Inventory: Inventory of where contracts are currently stored across both Waters and BD, including SharePoint sites, email archives, shared drives, and any partial CLM tooling. Assessment of document completeness, format distribution (PDF, DOCX, scanned images), and language distribution.
+
+Volume and Complexity Analysis: Analysis of the approximately 480 BD contracts requiring novation, categorized by contract type (MSA, SOW, SaaS subscription, maintenance agreement, data processing agreement), value tier, vendor relationship complexity, and novation urgency based on TSA exit dependency.
+
+Stakeholder and Capacity Analysis: Assessment of current staffing in Procurement and Legal. Number of FTEs dedicated to contract management, current throughput (contracts processed per week), capacity constraints, and skill gaps.
+
+System and Integration Landscape: Inventory of systems that have dependencies on vendor contracts, including the CMDB, Ariba, Oracle Financials, and any other procurement or vendor management systems.
+
+Pain Point and Opportunity Interviews: Structured interviews with 12 to 15 stakeholders across Procurement, Legal, IT, and Finance to capture specific pain points, manual effort hotspots, and AI opportunity areas.
+
+Output: CLM Current State Assessment Report (D-005), including process maps, contract volume analysis, capacity analysis, and prioritized opportunity areas.
+
+4.2.3 CLM AI Requirements Specification
+Based on the current state assessment, Deloitte will develop a detailed requirements specification for the AI-assisted contract management system, covering:
+
+Functional Requirements:
+- FR-001: System shall ingest contracts in PDF, DOCX, and scanned image formats (minimum)
+- FR-002: System shall extract a defined set of metadata fields from each contract (field set defined in requirements specification based on D-005 findings)
+- FR-003: System shall compare extracted metadata against a configurable Waters enterprise contract requirements checklist
+- FR-004: System shall flag non-compliant, missing, or ambiguous clauses with risk classification (High/Medium/Low)
+- FR-005: System shall generate first-draft novation documents based on extracted contract metadata and configurable templates
+- FR-006: System shall generate vendor communication drafts for novation notification
+- FR-007: System shall perform change impact analysis flagging downstream systems dependent on each vendor contract
+- FR-008: System shall provide a dashboard showing novation pipeline status, processing progress, cycle time metrics, and TSA exit dependency tracking
+- FR-009: System shall support human review and approval workflow before any AI-generated document is sent to a vendor
+- FR-010: System shall maintain a full audit log of all AI actions, human reviews, approvals, and document versions
+- FR-011: System shall support multi-user access with role-based permissions (Procurement, Legal, IT, Read-Only)
+- FR-012: System shall integrate with Waters' document storage (SharePoint) for contract repository management
+
+Non-Functional Requirements:
+- NFR-001: System shall process a standard contract (up to 50 pages) within 60 seconds
+- NFR-002: System shall support concurrent processing of at least 20 contracts simultaneously
+- NFR-003: System shall achieve metadata extraction accuracy of at least 90% on a defined validation set
+- NFR-004: System shall maintain 99.5% uptime during business hours
+- NFR-005: All contract data shall be encrypted at rest and in transit
+- NFR-006: System shall be deployed within Waters' security boundary (Azure private deployment)
+- NFR-007: System shall not transmit contract data to any third-party service other than the approved LLM API
+- NFR-008: Audit logs shall be retained for a minimum of 7 years
+
+Output: CLM AI Requirements Specification (D-006), including functional requirements, non-functional requirements, user stories, and acceptance criteria for each requirement.
+
+4.2.4 Contract Metadata Extraction Architecture Design
+Deloitte will design the technical architecture for the contract metadata extraction and AI review system, including:
+
+Data Ingestion Pipeline: Design of the document ingestion pipeline including file format handling, OCR processing for scanned documents, text extraction quality validation, and chunking strategy for large documents.
+
+Extraction Schema Design: Definition of the contract metadata schema — the specific fields to be extracted from each contract. Based on Waters' requirements and Deloitte's experience across comparable engagements, the initial schema will target approximately 150 metadata fields covering:
+- Contract identification fields (parties, dates, reference numbers, contract type)
+- Commercial terms (total value, payment terms, pricing structure, expense policy)
+- Obligation fields (key obligations of each party, deliverable schedules, milestone dates)
+- Rights and restrictions (termination rights, IP ownership, assignment rights, audit rights)
+- Risk and compliance fields (liability cap, indemnification, insurance requirements, governing law)
+- Integration and dependency fields (systems referenced, APIs specified, data processing terms)
+- Renewal and expiration fields (auto-renewal terms, notice periods, expiration dates)
+
+RAG Architecture Design: Design of the Retrieval Augmented Generation architecture for contract review, including vector embedding strategy, chunk size optimization, retrieval configuration, and prompt architecture for extraction and analysis tasks.
+
+Prompt Engineering Framework: Design of the prompt engineering framework for contract tasks including extraction prompts, validation prompts, novation draft generation prompts, and change impact analysis prompts. Includes prompt versioning and governance approach.
+
+Human-in-the-Loop Workflow Design: Design of the human review workflow including review interface mockups, approval routing logic, exception handling, and escalation procedures.
+
+Integration Architecture: Design of integration points with Waters systems including SharePoint (document repository), Azure Active Directory (user authentication and authorization), Ariba (future state vendor data), and CMDB (dependency mapping).
+
+Output: Contract Metadata Extraction Architecture Design (D-007), including architecture diagrams, data model, RAG configuration specification, and integration design.
+
+4.2.5 CLM AI Tool Configuration and Build
+Based on the approved architecture design (D-007), Deloitte will configure and build the AI contract management system in a non-production (development and UAT) environment. Build activities include:
+
+Sprint 1 (Weeks 9-10): Infrastructure setup, Claude API integration, document ingestion pipeline
+Sprint 2 (Weeks 11-12): Core extraction engine — metadata schema implementation, initial prompt development
+Sprint 3 (Weeks 13-14): Extraction accuracy testing and prompt optimization against Waters contract sample set
+Sprint 4 (Weeks 15-16): Checklist comparison engine, risk classification, flagging logic
+Sprint 5 (Weeks 17-18): Novation draft generation, vendor communication drafts
+Sprint 6 (Weeks 19-20): Change impact analysis, CMDB integration (read-only)
+Sprint 7 (Weeks 21-22): Dashboard development, pipeline tracking, TSA exit dependency view
+Sprint 8 (Weeks 23-24): Human-in-the-loop workflow, approval routing, audit logging
+Sprint 9 (Weeks 25-26): SharePoint integration, role-based access controls, security hardening
+Sprint 10 (Weeks 27-28): UAT support, bug fixes, performance optimization
+
+Each sprint will include a sprint planning session (2 hours), daily standups (15 minutes), a sprint demo (1 hour), and a sprint retrospective (30 minutes).
+
+Output: Configured CLM AI System in non-production environment (D-008), including system documentation, configuration guide, and known limitations register.
+
+4.2.6 User Acceptance Testing
+Deloitte will develop and execute a comprehensive UAT program for the CLM system:
+
+UAT Test Plan (D-009a): Covering test objectives, test scope, test scenarios, test data requirements, entry and exit criteria, defect classification and management process, and roles and responsibilities.
+
+Test Scenarios (minimum): The UAT will include at minimum the following test scenarios:
+- 50 contracts processed end-to-end through the extraction pipeline
+- Extraction accuracy validation against manually reviewed gold standard for each contract
+- Novation document generation for 20 contracts across different contract types
+- Change impact analysis for 15 contracts with known system dependencies
+- Dashboard accuracy validation against manually compiled pipeline data
+- Role-based access control testing across all defined user roles
+- Performance testing: concurrent processing of 20 contracts simultaneously
+- Security testing: penetration test of the non-production environment
+- Integration testing: SharePoint document retrieval and storage
+
+UAT Execution: Deloitte will support Waters stakeholders in executing the UAT plan, including providing test coordination, defect logging and tracking, and daily UAT status reporting.
+
+UAT Sign-Off: UAT will be considered complete when: (a) all High severity defects are resolved; (b) no more than 3 Medium severity defects remain open; (c) extraction accuracy achieves the NFR-003 threshold of 90% on the UAT contract set; and (d) Waters PMO Lead has signed the UAT completion certificate.
+
+Output: UAT Test Plan (D-009a), UAT Test Results Report (D-009b), UAT Sign-Off Certificate (D-009c).
+
+4.2.7 Training and Change Management for CLM
+Deloitte will develop and deliver a comprehensive training and change management program for the CLM system:
+
+Stakeholder Impact Assessment: Assessment of the impact of the CLM AI system on each affected role, including Procurement Managers, Legal Counsel, Procurement Analysts, IT Contract Managers, and Read-Only stakeholders.
+
+Communication Plan: Stakeholder communications plan covering program announcements, milestone communications, go-live communications, and ongoing updates. Includes communication templates for each stakeholder group.
+
+Training Curriculum: Role-based training curriculum covering:
+- Procurement Manager training: system overview, contract upload, dashboard navigation, approval workflow, exception handling (4 hours instructor-led + 1 hour e-learning)
+- Legal Counsel training: AI output review, override procedures, audit log review, AI limitations awareness (3 hours instructor-led + 30 minutes e-learning)
+- Procurement Analyst training: full system operation, contract ingestion, output validation, escalation procedures (6 hours instructor-led + 2 hours e-learning)
+- IT Contract Manager training: CMDB dependency review, change impact analysis interpretation (2 hours instructor-led)
+- Read-Only stakeholder training: dashboard navigation, report interpretation (1 hour e-learning only)
+
+Training Materials: All training materials will be developed in PowerPoint (presentation decks), Word (user guides and quick reference cards), and video recordings (screen capture with narration for e-learning modules).
+
+Adoption Tracking: Deloitte will implement adoption tracking covering system login frequency, contract processing volume, human review completion rates, and time-to-approval metrics. Monthly adoption reports will be provided to Waters program leadership.
+
+Output: Stakeholder Impact Assessment (D-010a), Communication Plan (D-010b), Training Curriculum and Materials (D-010c), Adoption Tracking Dashboard (D-010d).
+
+4.3 Workstream 3 — Financial Reporting Harmonization
+
+4.3.1 Overview and Business Problem
+The combined Waters and BD entity presents one of the most complex financial reporting integration challenges Deloitte has encountered in a comparable transaction. The two legacy environments use entirely different financial systems (Oracle Financials vs. SAP ECC 6.0), different charts of accounts, different SKU hierarchies, different revenue recognition methodologies, and different close cycle processes.
+
+The CFO, SLT, and investor relations team are operating four months post-close without a single consolidated view of the combined entity's financial performance. Revenue synergy commitments of $290 million by Year 3 cannot be credibly tracked without harmonized reporting. Wall Street analysts are increasingly focused on integration execution, and clean consolidated reporting is essential to maintaining investor confidence.
+
+This workstream does not attempt to resolve the full ERP consolidation — that is a multi-year program tied to the SAP S/4HANA migration. Instead, it creates an AI-mediated reconciliation and reporting layer that generates consolidated views from the existing heritage systems, buying the organization the clean reporting it needs while the deeper infrastructure work proceeds.
+
+4.3.2 Financial Reporting Current State Assessment
+Deloitte will conduct a comprehensive current state assessment of financial reporting across both legacy entities:
+
+Close Process Mapping: Detailed process maps of the current monthly and quarterly close process for both legacy Waters (Oracle) and legacy BD (SAP), including timeline, key activities, responsible roles, system touch points, and known bottlenecks.
+
+Chart of Accounts Comparison: Side-by-side analysis of the Waters and BD charts of accounts, identifying structural differences, equivalent accounts, unmatched accounts, and the complexity of mapping between them.
+
+SKU Hierarchy Analysis: Analysis of the Waters and BD product hierarchies at the SKU level, including total SKU count per entity, hierarchy depth, naming conventions, classification logic, and estimated overlap. Initial estimates suggest 15,000 to 25,000 SKUs across the combined entity with significant mapping complexity.
+
+Revenue Recognition Comparison: Comparison of revenue recognition policies and methodologies across Waters and BD, including any differences in timing, bundling, variable consideration treatment, and geography-specific rules.
+
+Reporting Requirements Mapping: Interviews with Waters CFO office, FP&A team, and investor relations to document the specific consolidated reporting outputs required, including frequency, granularity, and audience.
+
+Close Cycle Bottleneck Analysis: Identification of the specific activities in the close process that are consuming the most time and that are most amenable to AI acceleration.
+
+Output: Financial Reporting Current State Assessment (D-011), including process maps, chart of accounts comparison, SKU hierarchy analysis, and reporting requirements map.
+
+4.3.3 SKU Mapping and Reconciliation Design
+Based on the current state assessment, Deloitte will design the AI-assisted SKU mapping and reconciliation approach:
+
+SKU Mapping Methodology: Design of the methodology for mapping BD SKUs to Waters product hierarchy equivalents using large language model analysis of SKU descriptions, product attributes, and historical sales patterns. This will include: (a) AI-generated mapping proposals with confidence scores; (b) Human review and validation workflow for low-confidence mappings; (c) Mapping governance process for ongoing maintenance.
+
+Reconciliation Architecture: Design of the automated reconciliation approach for aligning booking events from the two heritage systems, including: transaction matching logic, anomaly detection rules for unmatched or inconsistent transactions, ML-based gap-filling for missing data, and audit trail requirements.
+
+Consolidated Reporting Architecture: Design of the consolidated reporting layer, including data aggregation logic, dimension harmonization, period alignment, and output format specifications for SLT dashboard, investor reporting, and FP&A workbench.
+
+Output: SKU Mapping Analysis and Reconciliation Design (D-012), including mapping methodology, reconciliation architecture, and consolidated reporting specifications.
+
+4.3.4 AI-Assisted Financial Reporting Tool Configuration
+Based on the approved design (D-012), Deloitte will configure the AI-assisted financial reporting layer:
+
+SKU Mapping Engine: Configuration of the LLM-based SKU mapping engine against the Waters and BD product catalogs. Initial batch processing of all SKUs to generate mapping proposals. Human review interface for validation.
+
+Reconciliation Engine: Configuration of the automated reconciliation engine for booking-to-revenue alignment. Integration with Oracle Financials and SAP ECC 6.0 data extracts (read-only access).
+
+Generative Reporting: Configuration of AI-powered narrative generation for management reporting, including BU-level financial summaries, variance commentary, and executive dashboard narratives.
+
+Pilot BU Deployment: The first deployment will cover a single, selected business unit where data quality and stakeholder availability are highest. Lessons learned from the pilot will inform the approach for remaining BUs.
+
+Output: Configured financial reporting AI layer for pilot BU (D-013), including system documentation and pilot BU sign-off.
+
+4.3.5 Close Cycle Compression Roadmap
+Deloitte will develop a roadmap for compressing the financial close cycle through AI and automation, covering:
+
+Quick Win Opportunities: AI automation opportunities that can reduce close cycle time within 90 days.
+
+Medium-Term Opportunities: Process redesign and AI integration opportunities for 6-12 month timeline.
+
+S/4HANA Integration Path: How the AI reporting layer will connect to and eventually be superseded by the Waters S/4HANA consolidation (planned 2027). Ensuring the AI layer does not create technical debt for the S/4HANA migration.
+
+Output: Close Cycle Compression Roadmap (D-014), including initiative prioritization, timeline, resource requirements, and S/4HANA alignment plan.
+
+4.4 Workstream 4 — Application Rationalization Advisory
+
+4.4.1 Overview and Business Problem
+The combined Waters and BD application portfolio contains approximately 1,200 systems. Waters' target state is approximately 500 systems — a rationalization of approximately 700 applications over the next 3 to 5 years. However, the TSA exit obligation creates near-term urgency: applications that are hosted on BD infrastructure or licensed under BD agreements must be addressed within the 18-month TSA window.
+
+Portfolio analysis has been completed at a high level. The kill/keep/clone/retire decisions are approximately 60% complete. The challenge is execution: the per-application execution work — dependency mapping, vendor contract review, migration planning, stakeholder notification, decommissioning — is done entirely manually and is not progressing at the pace required by TSA timelines.
+
+This workstream is advisory: Deloitte will design the AI-assisted rationalization approach and framework but will not build production AI systems for application rationalization in Phase 1. Full production build for this workstream is planned for Phase 2.
+
+4.4.2 Application Portfolio Assessment
+Deloitte will conduct an advisory assessment of the current application rationalization effort:
+
+Portfolio Status Review: Review of the current kill/keep/clone/retire analysis status, including which applications have decisions, which are pending, and which are blocked.
+
+TSA Exit Dependency Mapping: Identification of which application decisions are directly on the critical path to TSA exits, and the current risk to TSA exit timelines based on rationalization pace.
+
+Manual Process Analysis: Analysis of the current manual application rationalization process, including per-application effort estimates, bottleneck identification, and quality of current outputs.
+
+AI Opportunity Identification: Identification of specific activities within the rationalization process where AI can provide the greatest acceleration.
+
+CMDB Assessment: Assessment of the current state of the CMDB (Configuration Management Database), including completeness, accuracy, and integration with ServiceNow discovery.
+
+Output: Application Portfolio Assessment Advisory Report (D-015), including portfolio status, TSA risk analysis, and AI opportunity map.
+
+4.4.3 AI-Augmented Rationalization Framework Design
+Deloitte will design the framework for AI-assisted application rationalization:
+
+AI Kill/Keep/Clone/Retire Analysis: Design of the AI-assisted decision support approach for rationalization decisions, including: what data feeds the AI analysis (CMDB, usage telemetry, vendor contract data, business stakeholder inputs), what AI does (scores applications against criteria, identifies dependencies, flags risks), and how human decision-makers use AI outputs.
+
+Dependency Mapping Approach: Design of AI-assisted dependency mapping using CMDB data, API telemetry, source code analysis, and documentation analysis to build application dependency graphs.
+
+Contract-to-Application Linkage: Design of the integration between the CLM AI system (Workstream 2) and the application rationalization pipeline, enabling automated identification of vendor contracts associated with each application to be retired.
+
+Execution Pipeline Design: Design of the AI-orchestrated execution pipeline for application retirement, including automated notification drafting, change management workflow, decommissioning checklist, and audit documentation.
+
+Output: AI-Augmented Application Rationalization Framework (D-016), including framework design, data requirements, integration architecture, and Phase 2 implementation roadmap.
+
+4.5 AI Engine — Shared Program Infrastructure
+
+4.5.1 Overview
+The AI Engine is the shared infrastructure that makes all four workstreams possible. It is not a single workstream — it is the connective tissue that ensures the four workstreams operate on a common platform, share governance standards, avoid duplicating capability, and compound their collective output over time.
+
+The AI Engine has seven components:
+
+4.5.2 Component 1 — AI Integration Office (Program Management)
+The AI Integration Office provides program management, governance, and commercial management services for the overall program. Activities include:
+
+Program governance: Maintaining the program governance structure (steering committee, PMO committee, workstream operating committees) and associated meeting cadences, agendas, and follow-up tracking.
+
+Risk and issue management: Maintaining the program risk register, issue log, and decision log. Weekly risk review with program leadership. Escalation management.
+
+Dependency management: Tracking cross-workstream dependencies, predecessor activities, and blocked items. Maintaining the integrated program schedule.
+
+Stakeholder reporting: Monthly executive status report to steering committee. Biweekly PMO committee update. Weekly workstream status reports. Real-time program dashboard maintained in Waters' project management tool.
+
+Commercial management: SOW and change order management. Fee tracking against workstream budgets. Expense reporting and invoice management. Phase 2 SOW preparation.
+
+4.5.3 Component 2 — Architecture and Platform
+The Architecture and Platform team designs and maintains the technical foundation for all AI workstreams:
+
+LLM selection and evaluation: Ongoing evaluation of Claude model versions as they are released. Assessment of new capabilities and their applicability to Waters use cases. Recommendations on model upgrades and transitions.
+
+Agent architecture: Design and governance of agent architecture patterns used across workstreams, including single-agent, multi-agent swarm, and mesh configurations as appropriate to use case complexity.
+
+Orchestration and integration patterns: Standardized patterns for AI orchestration, API integration, and data pipeline design that all workstream teams must follow.
+
+Security and scalability standards: Security architecture standards including API key management, secrets management, network security, encryption standards, and access control patterns. Scalability standards including load handling, concurrency management, and rate limiting.
+
+Platform operations: Day-to-day operation and monitoring of the shared AI platform infrastructure on Azure.
+
+4.5.4 Component 3 — Data and Retrieval Engineering
+The Data and Retrieval Engineering team manages all data-related activities across the program:
+
+Data discovery and landscape assessment: Ongoing discovery of data assets relevant to AI use cases, including quality assessment, lineage documentation, and access path mapping.
+
+Retrieval architecture: Design and operation of the RAG infrastructure including vector database management, embedding pipelines, chunk optimization, and retrieval quality monitoring.
+
+Embedding infrastructure: Management of the embedding pipeline for all document types ingested across workstreams.
+
+Data quality and governance: Data quality monitoring and remediation for AI-ingested data. Governance of data used to train or fine-tune models.
+
+4.5.5 Component 4 — AI Governance
+The AI Governance team operationalizes the governance framework designed in Workstream 1:
+
+Output monitoring: Continuous monitoring of AI outputs across all production use cases against defined quality benchmarks. Alerting on degradation.
+
+Hallucination auditing: Structured sampling of AI outputs against source documents across all use cases. Maintaining accuracy baselines and tracking drift.
+
+Prompt governance: Managing the version-controlled prompt library. Change approval workflow for prompt edits. Regression testing after prompt changes.
+
+PII detection: Automated scanning of AI inputs and outputs for personally identifiable information across all use cases.
+
+Drift detection: Monitoring for performance degradation over time. Triggering revalidation when drift thresholds are exceeded.
+
+Model versioning: Tracking which model version produced which output. Managing model version transitions.
+
+Cost and token governance: Budget controls and consumption alerting by workstream and use case. Optimization recommendations.
+
+4.5.6 Component 5 — Value and Financial Management
+The Value and Financial Management team tracks and communicates the financial value delivered by the program:
+
+Baseline establishment: Working with Waters stakeholders to document the baseline metrics for each use case — current process cost, cycle time, headcount, and error rates — before AI deployment.
+
+Value measurement: Tracking post-deployment metrics against baseline. Calculating value realized in terms of cost savings, cycle time compression, headcount avoidance, and TSA fee avoidance.
+
+Business case portfolio management: Maintaining the business case for all active and pipeline use cases. Updating value projections based on actual results.
+
+Financial reporting to steering committee: Monthly value realization report to executive steering committee.
+
+ROI and Phase 2 business case: Building the quantified ROI case for Phase 2 investment based on Phase 1 results.
+
+4.5.7 Component 6 — Change and Adoption
+The Change and Adoption team ensures that AI deployments achieve their intended organizational adoption:
+
+Stakeholder engagement and change impact: Maintaining the stakeholder map and change impact assessment across all workstreams. Regular stakeholder pulse surveys.
+
+Communications design and execution: Designing and executing the communications program for the overall AI initiative, including executive communications, all-hands updates, and targeted stakeholder communications.
+
+Training design and delivery: Overseeing the development and delivery of training programs across all workstreams. Maintaining a training calendar. Tracking completion rates.
+
+Human-in-the-loop training: Specific training for personnel who review and approve AI outputs — ensuring they understand AI limitations, know how to validate outputs, and feel confident in their role.
+
+Adoption tracking: Weekly adoption metrics across all deployed use cases. Identification of low-adoption areas and targeted interventions.
+
+Capability transfer: Planning and executing the transfer of change and adoption capability to Waters internal team over the course of Phase 2.
+
+4.5.8 Component 7 — Pod Lead Pool
+The Pod Lead Pool provides experienced product management and delivery leadership for individual use case pods:
+
+Use case analysis and scoping: Working with business stakeholders to analyze and scope new use cases before committing to build.
+
+Process and workflow assessment: Documenting current-state processes and designing target-state AI-augmented processes for each use case.
+
+Data readiness evaluation: Assessing whether the data required for a use case is available, accessible, and of sufficient quality.
+
+Roadmap sequencing: Advising on the prioritization and sequencing of use cases within and across workstreams.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 5 — DELIVERABLES — DETAILED SPECIFICATIONS
+
+5.1 Deliverable Register
+
+All deliverables produced under this SOW are listed below with detailed specifications. The deliverable acceptance process is defined in Exhibit B.
+
+━━━━━━━━━━━━━━━━━━━━━━
+
+DELIVERABLE D-001: AI Maturity Assessment Report
+
+Workstream: AI Strategy and Governance
+Due Date: End of Month 2 (June 30, 2026)
+Format: PowerPoint presentation (executive summary, 30 slides maximum) + Word document (detailed findings, no page limit)
+Distribution: Waters CIO, Waters CTO (if applicable), Waters Program Sponsor, Waters IT Architecture Lead
+
+Content Requirements:
+The report shall include, at minimum, the following sections:
+(a) Executive Summary: Key findings, overall maturity rating, and top 5 priority recommendations (maximum 5 pages)
+(b) Assessment Methodology: Description of interview protocol, survey methodology, and documentation review approach
+(c) Maturity Findings by Dimension: Detailed findings for each of the six maturity dimensions (Strategy, Data, Technology, Talent, Governance, Culture) with evidence base and maturity rating on a defined 5-point scale
+(d) Comparative Maturity: Waters legacy vs. BD maturity comparison highlighting integration-specific gaps
+(e) AI Opportunity Map: Visual map of AI opportunities across the integration workstreams, scored on value, AI fit, data readiness, and urgency dimensions
+(f) Recommended Priority Use Cases: Top 8-10 recommended use cases with prioritization rationale
+(g) Risks and Barriers: Key risks and barriers to AI adoption at Waters with recommended mitigations
+
+Acceptance Criteria:
+(a) Report reviewed by Waters CIO and provided to Deloitte within 10 business days of delivery
+(b) All material factual errors identified by Waters corrected in revised version within 5 business days
+(c) Waters CIO provides written approval (email confirmation acceptable)
+
+━━━━━━━━━━━━━━━━━━━━━━
+
+DELIVERABLE D-002: AI Governance Framework
+
+Workstream: AI Strategy and Governance
+Due Date: End of Month 3 (July 31, 2026)
+Format: Word document (primary framework document) + Excel (RACI matrix, risk register) + PowerPoint (executive presentation, 20 slides maximum)
+Distribution: Waters CIO, Waters Legal, Waters Compliance, Waters CISO, Waters Program Sponsor
+
+Content Requirements:
+(a) Introduction and Scope: Purpose, scope, and relationship of the framework to other Waters governance documents
+(b) AI Use Case Governance: Complete use case governance process with workflow diagrams, decision criteria, approval thresholds, and roles
+(c) AI Model Governance: Model selection standards, prompt governance process, output monitoring requirements, versioning standards, and fine-tuning governance
+(d) AI Data Governance: Data classification standards for AI use, PII handling procedures, data ingestion governance, and retention policies
+(e) AI Vendor and Tooling Governance: Vendor evaluation criteria, tool procurement process, shadow AI policy, and employee AI usage policy
+(f) AI Risk and Compliance: Risk taxonomy, risk assessment methodology, compliance mapping, incident management procedure, and escalation framework
+(g) AI Ethics Policy: Ethical principles, prohibited use cases, transparency requirements, accountability framework, and review process
+(h) Implementation Roadmap: Phased implementation plan for operationalizing the governance framework
+
+Acceptance Criteria:
+(a) Framework reviewed by Waters CIO, Legal, and Compliance within 15 business days of delivery
+(b) Legal and Compliance provide written sign-off or specific redline comments
+(c) All HIGH priority legal or compliance comments resolved before final acceptance
+(d) Waters CIO provides written approval
+
+━━━━━━━━━━━━━━━━━━━━━━
+
+DELIVERABLE D-005: CLM Current State Assessment Report
+
+Workstream: Contract Lifecycle Management
+Due Date: End of Month 2 (June 30, 2026)
+Format: Word document (detailed report) + Visio or equivalent (process maps) + Excel (contract inventory and volume analysis)
+Distribution: Waters PMO Lead (Seth Bachman), Waters Procurement Lead, Waters Legal Lead, Waters CIO
+
+Content Requirements:
+(a) Executive Summary: Key findings and priority recommendations (maximum 3 pages)
+(b) Current Process Maps: Swim-lane process maps for all identified contract lifecycle processes at both Waters and BD
+(c) Contract Repository Inventory: Inventory of all identified contract storage locations, format distribution, completeness assessment, and access assessment
+(d) Contract Volume and Complexity Analysis: Detailed analysis of the approximately 480 BD novation contracts by type, value tier, complexity, and TSA exit dependency
+(e) Stakeholder and Capacity Analysis: Procurement and Legal FTE counts, throughput analysis, capacity constraints, and skill gap assessment
+(f) System and Integration Landscape: Diagram and description of all systems with dependencies on vendor contracts
+(g) Pain Point Summary: Consolidated pain points from stakeholder interviews, ranked by frequency and impact
+(h) AI Opportunity Areas: Prioritized list of AI opportunity areas within the contract lifecycle with initial value estimates
+
+Acceptance Criteria:
+(a) Report reviewed by Waters PMO Lead within 10 business days of delivery
+(b) Material factual corrections provided to Deloitte within 5 business days
+(c) Waters PMO Lead provides written approval
+
+━━━━━━━━━━━━━━━━━━━━━━
+
+DELIVERABLE D-006: CLM AI Requirements Specification
+
+Workstream: Contract Lifecycle Management
+Due Date: End of Month 3 (July 31, 2026)
+Format: Word document
+Distribution: Waters PMO Lead, Waters Legal Lead, Waters IT Architecture Lead, Waters CISO
+
+Content Requirements:
+(a) Introduction and Scope: Purpose, scope, and relationship to D-005
+(b) User Personas: Detailed user personas for each user role (Procurement Manager, Legal Counsel, Procurement Analyst, IT Contract Manager, Read-Only)
+(c) Functional Requirements: Complete list of functional requirements, each with: requirement ID, requirement statement, user story, priority (Must Have / Should Have / Could Have), and acceptance criteria
+(d) Non-Functional Requirements: Complete list of non-functional requirements covering performance, security, reliability, usability, and compliance
+(e) Data Requirements: Data inputs required, data outputs produced, data retention requirements, and data security requirements
+(f) Integration Requirements: Detailed integration requirements for each system integration point
+(g) Compliance Requirements: Regulatory and compliance requirements applicable to the system
+(h) Out-of-Scope Clarifications: Explicit list of capabilities that are out of scope for Phase 1 build
+
+Acceptance Criteria:
+(a) Requirements reviewed by Waters PMO Lead and Legal Lead within 15 business days of delivery
+(b) All Must Have requirements confirmed or modified with Waters' written agreement
+(c) Waters PMO Lead provides written approval
+
+━━━━━━━━━━━━━━━━━━━━━━
+
+DELIVERABLE D-007: Contract Metadata Extraction Architecture Design
+
+Workstream: Contract Lifecycle Management
+Due Date: End of Month 4 (August 31, 2026)
+Format: Word document (architecture design) + Visio or equivalent (architecture diagrams) + Excel (metadata schema)
+Distribution: Waters IT Architecture Lead, Waters CISO, Waters PMO Lead, Waters Cloud Infrastructure Lead
+
+Content Requirements:
+(a) Architecture Overview: High-level architecture diagram showing all system components and their relationships
+(b) Data Ingestion Pipeline Design: Detailed design of the document ingestion pipeline including file handling, OCR processing, text extraction, quality validation, and chunking strategy
+(c) Metadata Schema: Complete metadata schema specifying all fields to be extracted, data type, extraction approach, validation rules, and example values. Minimum 150 fields as specified in Section 4.2.4.
+(d) RAG Architecture Design: Detailed design of the retrieval architecture including vector database selection and justification, embedding model selection, chunk size and overlap parameters, retrieval configuration, and prompt architecture
+(e) Prompt Engineering Framework: Design of prompt templates for all extraction and generation tasks, including prompt versioning approach and governance
+(f) Human-in-the-Loop Workflow Design: Detailed workflow design for human review and approval, including interface mockups, routing logic, and escalation procedures
+(g) Integration Architecture: Detailed integration design for each integration point (SharePoint, Azure AD, CMDB)
+(h) Security Architecture: Security design covering encryption, access control, API key management, data isolation, and audit logging
+(i) Infrastructure Design: Azure infrastructure design including compute, storage, networking, and monitoring components
+(j) Technology Selection Rationale: Documented rationale for all technology selections with alternatives considered
+
+Acceptance Criteria:
+(a) Architecture reviewed by Waters IT Architecture team within 10 business days of delivery
+(b) Waters CISO security review completed within 10 business days
+(c) All HIGH priority architectural comments or security findings resolved before final acceptance
+(d) Waters IT Architecture Lead provides written approval
+
+━━━━━━━━━━━━━━━━━━━━━━
+
+DELIVERABLES D-008 through D-017 follow equivalent detailed specification formats covering CLM system build, UAT, training, financial reporting, and application rationalization workstreams. Detailed specifications for these deliverables are contained in Annexes 1 through 10 of this SOW (available upon request and incorporated by reference).
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 6 — PROJECT METHODOLOGY
+
+6.1 Deloitte Accelerate AI™ Methodology
+
+Deloitte will deliver this engagement using its proprietary Accelerate AI™ methodology, which has been developed and refined across 47 enterprise AI deployments over the past three years. The methodology is structured around four phases with specific activities, tools, and outputs at each phase.
+
+6.1.1 Phase A — Discover (Months 1-2)
+
+Objectives: Establish ground truth about Waters' current state, AI maturity, data landscape, and integration complexity. Identify and prioritize AI use cases. Establish program governance.
+
+Key Activities:
+- Stakeholder interview program (35-45 interviews across Waters and BD)
+- Current state documentation review (contracts, HR policies, financial reports, application inventory, architecture documents)
+- Data landscape assessment (identifying where the data lives for each use case)
+- AI maturity assessment (six-dimension framework)
+- Use case identification and prioritization workshops
+- Program governance establishment (charter, RACI, cadences)
+- AI Engine setup: team onboarding, platform access, tool procurement
+
+Tools: Deloitte AI Maturity Assessment Protocol, Use Case Prioritization Matrix, Data Readiness Scorecard, Stakeholder Interview Guide Library (17 role-specific guides)
+
+Phase Gate: Discovery Phase Gate Review at end of Month 2. Waters Program Sponsor must approve AI Maturity Assessment (D-001) and CLM Current State Assessment (D-005) before Phase B begins.
+
+6.1.2 Phase B — Design (Months 3-4)
+
+Objectives: Design the AI systems, governance framework, and operating model. Make technology and architectural decisions. Finalize requirements. Begin building organizational readiness.
+
+Key Activities:
+- AI Governance Framework design and stakeholder workshops
+- CLM requirements specification finalization
+- Contract metadata extraction architecture design and security review
+- Financial reporting reconciliation design
+- Application rationalization framework design
+- Technology selection for full stack
+- Prompt engineering research and experimentation (pre-build phase)
+- Change management stakeholder analysis and communication planning
+- Training curriculum design
+
+Tools: Deloitte Architecture Decision Record Template, Technology Evaluation Scorecard, Prompt Engineering Playbook, Change Impact Assessment Tool
+
+Phase Gate: Design Phase Gate Review at end of Month 4. Waters IT Architecture Lead must approve architecture design (D-007) before Phase C begins. Waters Program Sponsor must approve AI Governance Framework (D-002).
+
+6.1.3 Phase C — Build and Validate (Months 5-8)
+
+Objectives: Build, configure, test, and validate the AI systems across all workstreams. Run parallel change management and training activities. Demonstrate measurable AI value.
+
+Key Activities:
+- Sprint-based build for CLM AI system (10 x 2-week sprints across Months 5-8)
+- Financial reporting AI layer build (Months 5-7, single BU pilot)
+- UAT planning and execution (Months 7-8)
+- Training development and delivery (rolling, by sprint)
+- Change management communications and adoption activities
+- Value measurement: baseline capture and early value tracking
+- Performance and security testing
+
+Agile Ceremonies: Sprint planning (2 hours biweekly), daily standups (15 minutes), sprint review/demo (1 hour biweekly), sprint retrospective (30 minutes biweekly), backlog refinement (1 hour biweekly).
+
+Velocity Tracking: Deloitte will maintain a sprint velocity tracker visible to Waters program leadership throughout Phase C. Burn-down charts will be updated daily.
+
+Phase Gate: Build Phase Gate at end of Month 8. UAT sign-off required. Go/no-go decision for go-live.
+
+6.1.4 Phase D — Deploy and Hypercare (Month 9)
+
+Objectives: Deploy AI systems to production. Provide intensive post-go-live support. Transfer knowledge to Waters team. Close the program and prepare for Phase 2.
+
+Key Activities:
+- Production deployment: CLM AI system and financial reporting layer
+- Go-live support: dedicated support team for first 2 weeks post-go-live
+- Hypercare monitoring: daily monitoring of system performance, output quality, and user adoption for full month
+- Issue triage and resolution: rapid response to production issues
+- Knowledge transfer: formal handover sessions with Waters AI Guild and IT team
+- Program closure: lessons learned, final value realization report, Phase 2 SOW preparation
+- AI CoE activation: final standup activities for Waters internal AI CoE
+
+6.2 Quality Standards
+
+6.2.1 Deliverable Quality Review Process
+All deliverables will undergo a minimum two-stage internal quality review before client delivery:
+Stage 1: Workstream lead review (checking completeness, accuracy, and alignment with SOW specifications)
+Stage 2: Engagement Manager review (checking quality, clarity, consistency, and client-readiness)
+
+For deliverables rated High Complexity (D-002, D-006, D-007), an additional Stage 3 Engagement Partner review is required.
+
+6.2.2 Issue and Defect Management
+During the build phase, all issues and defects identified during testing will be tracked in a shared defect management tool (Jira or equivalent) accessible to both Deloitte and Waters teams. Defects will be classified as:
+- Severity 1 (Critical): System is non-functional or produces incorrect outputs on core use case. Resolution target: 24 hours.
+- Severity 2 (High): Major feature not working or significantly degraded. Resolution target: 3 business days.
+- Severity 3 (Medium): Feature working with workaround available. Resolution target: 5 business days.
+- Severity 4 (Low): Minor issue with no functional impact. Resolution target: Sprint backlog.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 7 — PROJECT GOVERNANCE AND OPERATING MODEL
+
+7.1 Governance Structure
+
+Executive Steering Committee ("ESC")
+Composition: Waters CIO (Brook Colangelo, Chair), Waters CFO (for financial reporting workstream sessions), Waters General Counsel (for CLM and governance workstream sessions), Deloitte Engagement Partner (Jonathan R. Whitfield)
+Meeting Frequency: Monthly (last Thursday of each month, 8:00-9:00 AM Eastern)
+Quorum: Waters CIO and Deloitte Engagement Partner must be present
+Responsibilities: Program strategic direction, scope changes above $250,000, policy decisions, escalation of issues unresolved at PMO Committee level, Phase 2 authorization
+Decision Authority: Approve scope changes above $250,000; approve or decline recommended course corrections; authorize Phase 2 SOW
+
+Program Management Committee ("PMC")
+Composition: Waters Program Sponsor (Seth Bachman), Waters IT Architecture Lead, Waters Change Management Lead, Deloitte Engagement Manager (Sarah M. Chen), Deloitte Workstream Leads
+Meeting Frequency: Biweekly (every other Tuesday, 10:00-11:00 AM Eastern)
+Quorum: Waters Program Sponsor and Deloitte Engagement Manager must be present
+Responsibilities: Program progress review, risk and issue management, cross-workstream dependencies, scope changes up to $250,000, resource allocation decisions
+Decision Authority: Approve change orders up to $250,000; approve scope reallocation within approved total budget; resolve cross-workstream conflicts
+
+Workstream Operating Committees ("WOC")
+One WOC per workstream:
+- WOC-1: AI Strategy and Governance (weekly, Mondays 2:00-3:00 PM Eastern)
+- WOC-2: Contract Lifecycle Management (weekly, Tuesdays 2:00-3:00 PM Eastern)
+- WOC-3: Financial Reporting (weekly, Wednesdays 2:00-3:00 PM Eastern)
+- WOC-4: Application Rationalization (biweekly, Thursdays 2:00-3:00 PM Eastern)
+Composition: Waters workstream lead, Deloitte workstream lead, relevant subject matter experts
+Responsibilities: Workstream progress, sprint planning support, day-to-day issue resolution, escalation to PMC if not resolved within 3 business days
+
+7.2 Reporting Cadence
+
+Weekly: Workstream status emails from each Deloitte workstream lead to Waters workstream lead (every Friday by 5:00 PM Eastern). Standard template provided in Exhibit G.
+
+Biweekly: Program status presentation at PMC meeting. Standard PowerPoint deck covering: overall RAG status, milestone progress, risk and issue summary, decisions required, financial summary.
+
+Monthly: Executive status presentation at ESC meeting. Standard PowerPoint deck covering: program health, milestone achievement, value realization summary, risk escalations, financial summary, and upcoming period outlook.
+
+Ad Hoc: Critical issues (Severity 1 defects, major scope risks, resource emergencies) communicated within 4 business hours via phone and email.
+
+7.3 Change Management Process
+
+All proposed changes to scope, timeline, fees, or resources must follow the formal change order process defined in Exhibit F. No changes will be binding until a signed change order is in place. Verbal agreements or email approvals are not sufficient to authorize changes.
+
+Change orders up to $50,000: Approved by Deloitte Engagement Manager and Waters Program Sponsor
+Change orders $50,001 to $250,000: Approved by Deloitte Engagement Partner and Waters Program Sponsor
+Change orders above $250,000: Approved by Deloitte Engagement Partner and Waters CIO (ESC)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 8 — TIMELINE, MILESTONES, AND PHASE GATES
+
+8.1 Overall Timeline
+
+Program Effective Date: May 1, 2026
+Phase A (Discover): May 1 – June 30, 2026 (Months 1-2)
+Phase B (Design): July 1 – August 31, 2026 (Months 3-4)
+Phase C (Build and Validate): September 1 – December 31, 2026 (Months 5-8)
+Phase D (Deploy and Hypercare): January 1 – January 31, 2027 (Month 9)
+Program End Date: January 31, 2027
+
+8.2 Key Milestones
+
+MS-001: Program Kickoff
+Target Date: May 5, 2026 (Week 1)
+Completion Criteria: Full-day kickoff meeting held; all workstream leads introduced; governance charter signed by Waters Program Sponsor; program tools and communication channels operational; Deloitte team has all required system access.
+Dependencies: Waters Program Sponsor availability; system access provisioned by Waters IT.
+Risk if missed: Cascading delay to all Month 1 activities.
+
+MS-002: Stakeholder Interview Program Complete
+Target Date: May 23, 2026 (Week 4)
+Completion Criteria: Minimum 35 stakeholder interviews completed (at least 5 per workstream); interview notes synthesized; key themes documented.
+Dependencies: Waters scheduling cooperation for all 35+ interviewees.
+Risk if missed: Delay to D-001 and D-005.
+
+MS-003: Discovery Phase Gate (Phase A Complete)
+Target Date: June 30, 2026 (End of Month 2)
+Completion Criteria: D-001 (AI Maturity Assessment) delivered and approved; D-005 (CLM Current State Assessment) delivered and approved; D-011 (Financial Reporting Current State Assessment) delivered and approved; program risk register current and reviewed by PMC.
+Dependencies: Waters timely review of D-001 and D-005 within specified acceptance timelines.
+Risk if missed: Phase B delayed; downstream impact on all build activities.
+
+MS-004: AI Governance Framework Approved
+Target Date: July 31, 2026 (End of Month 3)
+Completion Criteria: D-002 (AI Governance Framework) delivered, reviewed by Legal and Compliance, and approved by Waters CIO.
+Dependencies: Waters Legal and Compliance availability for review; Waters CIO approval.
+Risk if missed: Build phase proceeds without governance standards, creating risk of rework.
+
+MS-005: CLM Architecture Approved
+Target Date: August 31, 2026 (End of Month 4)
+Completion Criteria: D-007 (Contract Metadata Extraction Architecture Design) delivered, security reviewed by Waters CISO, and approved by Waters IT Architecture Lead.
+Dependencies: Waters IT Architecture and CISO review within 10 business days of delivery.
+Risk if missed: Phase C build delayed by up to 4 weeks.
+
+MS-006: Design Phase Gate (Phase B Complete)
+Target Date: August 31, 2026 (End of Month 4)
+Completion Criteria: All Phase B deliverables delivered; D-002 and D-007 approved; technology selection confirmed; Phase C sprint plan finalized.
+Dependencies: All MS-003 through MS-005 complete.
+Risk if missed: Build phase delayed.
+
+MS-007: CLM Sprint 5 Demo (Mid-Build Checkpoint)
+Target Date: October 23, 2026 (End of Sprint 5, Week 18)
+Completion Criteria: Core extraction engine functional; extraction accuracy validated on 50-contract sample at 85%+ accuracy; novation draft generation demonstrated; Waters PMO Lead has attended sprint demo and confirmed direction.
+Dependencies: BD contract repository available and sample contracts accessible.
+Risk if missed: Final build timeline at risk; possible need for change order.
+
+MS-008: CLM System UAT Entry
+Target Date: November 20, 2026 (End of Month 7)
+Completion Criteria: D-008 (CLM AI System in non-production) complete; all Severity 1 and Severity 2 defects from internal testing resolved; UAT test plan (D-009a) approved by Waters PMO Lead; test data prepared; UAT users trained.
+Dependencies: All 10 build sprints complete; Waters UAT team available.
+Risk if missed: UAT completion and go-live at risk.
+
+MS-009: UAT Sign-Off
+Target Date: December 19, 2026 (End of Month 8)
+Completion Criteria: All UAT test scenarios executed; all Severity 1 defects resolved; no more than 3 Severity 2 defects open; extraction accuracy ≥90% on UAT contract set; Waters PMO Lead signs UAT completion certificate.
+Dependencies: Successful UAT execution; timely Waters defect review and approval.
+Risk if missed: Go-live delayed to February 2027; possible TSA impact.
+
+MS-010: Go-Live (Production Deployment)
+Target Date: January 7, 2027 (Month 9, Week 1)
+Completion Criteria: CLM AI system deployed to production Azure environment; financial reporting AI layer live for pilot BU; all go-live users trained; hypercare team in place; monitoring dashboards active.
+Dependencies: MS-009 complete; production environment provisioned; all security approvals in place.
+Risk if missed: Program end date at risk; Phase 2 timeline impact.
+
+MS-011: Program Closure
+Target Date: January 31, 2027 (End of Month 9)
+Completion Criteria: 30-day hypercare complete; knowledge transfer sessions completed; all deliverables formally accepted; final value realization report (D-0XX) delivered; program closure document signed by Waters Program Sponsor; Phase 2 SOW delivered to Waters for review.
+Dependencies: MS-010 complete; Deloitte team transition complete.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 9 — ASSUMPTIONS AND CONSTRAINTS
+
+9.1 Critical Assumptions
+
+The following assumptions are critical to Deloitte's ability to deliver within the committed timeline and budget. If any of these assumptions proves incorrect, Deloitte will notify Waters immediately and may submit a change order to adjust scope, timeline, or fees accordingly.
+
+A-001 CRITICAL: BD contract repository will be made available to Waters and accessible to the Deloitte CLM team no later than May 31, 2026 (end of Month 1). Delay in access to BD contracts will directly impact the CLM workstream timeline. Each month of delay to A-001 is estimated to push the CLM go-live date back by one month.
+
+A-002 CRITICAL: Waters will designate a named Program Sponsor (Seth Bachman or approved alternative) with decision authority who commits a minimum of 0.5 FTE to program oversight activities throughout Phase 1.
+
+A-003 CRITICAL: The Anthropic Claude API will be accessible from Waters' Azure environment for AI development and production deployment by May 15, 2026. Deloitte understands that Waters CISO Scott has approved Claude for enterprise use. If API access is not available by this date, Sprint 1 activities will be delayed.
+
+A-004: Waters will provide at minimum the following named client resources at the specified time commitments:
+- PMO Lead / Program Sponsor: 0.5 FTE throughout
+- CLM Workstream Lead (Procurement): 0.3 FTE Months 1-8, 0.5 FTE Month 9
+- Legal Counsel (CLM): 0.2 FTE Months 2-8
+- IT Architecture Lead: 0.3 FTE Months 2-5
+- Waters CISO or delegate: available for security reviews within specified timelines
+- Financial Reporting Workstream Lead: 0.3 FTE Months 1-6
+- AI Guild Lead (Hari Patel or delegate): 0.2 FTE throughout
+
+A-005: Waters will complete all deliverable reviews within the timelines specified in Section 5. Delays in Waters review beyond the specified timelines may result in deliverable due date adjustments.
+
+A-006: The AI vendor/platform selected in D-003 (beyond the already-confirmed Claude and Azure) will be procured and licensed by Waters no later than the start of Month 5 (September 1, 2026) to enable build phase configuration.
+
+A-007: Waters will not make material changes to the scope of the BD integration (additional acquisitions, divestitures, or major organizational restructuring) after Month 2 that would materially affect the scope of this SOW.
+
+A-008: Deloitte personnel will receive the following access necessary to perform the Services:
+- Remote access to Waters corporate network via VPN or equivalent
+- Access to Waters Microsoft 365 environment (SharePoint, Teams, Outlook) for collaboration
+- Read-only access to Waters relevant systems for data discovery (CMDB, Oracle Financials, SharePoint contract repository) with access provisioned within 5 business days of request
+- Physical access to Waters Milford, MA facility during normal business hours for on-site sessions
+
+A-009: The budget for AI vendor and tooling licensing (beyond Anthropic API costs) is not included in this SOW and will be procured separately by Waters. Deloitte estimates additional tooling costs in the range of $200,000 to $400,000 for Phase 1 (vector database, document processing, monitoring tools).
+
+A-010: Waters will maintain a reasonably stable organizational structure for the program stakeholders throughout Phase 1. If key Waters stakeholders (Program Sponsor, CLM Workstream Lead, IT Architecture Lead) change, Waters will ensure an appropriate transition period and knowledge transfer to successors.
+
+9.2 Constraints
+
+C-001: All AI systems built under this SOW must be deployable within Waters' Azure environment and must not transmit Waters Confidential Information outside of Waters' approved cloud boundary, except to the Anthropic Claude API which has received specific CISO approval.
+
+C-002: No production AI deployment may go live without written security approval from Waters CISO or designated delegate.
+
+C-003: All code produced under this SOW must be deposited in a Waters-controlled code repository (Azure DevOps or GitHub Enterprise) throughout development. Deloitte will not retain the only copy of production code.
+
+C-004: This SOW does not authorize Deloitte to provide legal advice. Deloitte's CLM workstream provides AI tooling and process support; legal review of contracts remains entirely the responsibility of Waters' legal team.
+
+C-005: Timeline constraints are driven by Waters' TSA exit obligations. Deloitte will flag immediately any risk to key milestones that could impact TSA exit timelines.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 10 — DEPENDENCIES AND PREDECESSOR ACTIVITIES
+
+10.1 External Dependencies
+
+DEP-001 CRITICAL: BD Contract Repository Availability
+Dependent Workstream: CLM (Workstream 2)
+Dependency: Access to the BD contract repository containing the approximately 480 contracts requiring novation, in a digital, machine-readable format.
+Required By: May 31, 2026 (end of Month 1)
+Risk if Late: Each month of delay pushes CLM go-live by one month. If not available by July 1, CLM timeline may require a change order.
+Owner: Waters PMO Lead (Seth Bachman) / BD Integration Team
+
+DEP-002 CRITICAL: SAP and Oracle Financial Data Extracts
+Dependent Workstream: Financial Reporting (Workstream 3)
+Dependency: Read-only data extracts from SAP ECC 6.0 (BD) and Oracle Financials (Waters) for at least one pilot BU, including transaction data, chart of accounts, and SKU master data.
+Required By: July 31, 2026 (start of Month 3 design activities)
+Risk if Late: Financial reporting design cannot be completed without actual data; may require synthetic data approach as interim measure.
+Owner: Waters Finance / IT
+
+DEP-003: CMDB Current State Data
+Dependent Workstream: Application Rationalization (Workstream 4) and CLM (for change impact analysis feature)
+Dependency: Export of current CMDB data covering all applications in scope, including application metadata, owner, hosting location, and known integrations.
+Required By: June 30, 2026 (end of Month 2)
+Risk if Late: Change impact analysis feature of CLM system and application rationalization advisory work cannot be completed.
+Owner: Waters IT / ServiceNow team
+
+DEP-004: Azure Environment Provisioning
+Dependent Workstream: All (AI Engine)
+Dependency: Azure environment for development, UAT, and production deployment provisioned and accessible to Deloitte team.
+Required By: May 15, 2026
+Risk if Late: All build activities delayed.
+Owner: Waters Cloud Infrastructure Team
+
+DEP-005: Anthropic Claude API Access
+Dependent Workstream: All (AI Engine)
+Dependency: Anthropic Claude API accessible from Waters Azure environment with appropriate quotas for development and production use.
+Required By: May 15, 2026
+Risk if Late: All AI development activities delayed.
+Owner: Waters IT / CISO
+
+DEP-006: Waters AI Guild Availability
+Dependent Workstream: All (capability building objective)
+Dependency: Hari Patel and at minimum 3 Waters AI Guild members available at 20% time minimum for knowledge transfer and collaborative development activities.
+Required By: May 15, 2026 (ongoing)
+Risk if Late: Capability building objective at risk; Waters will not be positioned to sustain AI systems post Phase 1.
+Owner: Waters CIO / AI Guild Lead
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 11 — RISKS AND MITIGATION STRATEGIES
+
+11.1 Program Risk Register
+
+RISK-001: BD Contract Repository Delayed or Incomplete
+Probability: High | Impact: High | Overall: CRITICAL
+Description: The BD contract repository may not be available in digital, machine-readable format within the required timeframe. BD contracts may be stored in formats (scanned paper, legacy systems) that require significant preprocessing before AI can process them.
+Mitigation: (a) Deloitte CLM team to conduct repository readiness assessment in Week 1; (b) Waters PMO Lead to escalate BD data availability to ESC by end of Week 2; (c) If repository not available by end of Month 1, initiate change order discussion.
+Contingency: If BD contracts are not available by Month 2, the CLM workstream will pivot to focus on Waters' own procurement contracts (new MSAs, SOWs) as the first production use case, with BD novation contracts addressed once available.
+
+RISK-002: Waters Stakeholder Availability
+Probability: High | Impact: High | Overall: HIGH
+Description: The Waters program team (PMO Lead, workstream leads, subject matter experts) are simultaneously managing their day jobs and the BD integration. Time commitment to this program will compete with other urgent demands.
+Mitigation: (a) Deloitte to maximize asynchronous collaboration and minimize time burden of program participation; (b) All Waters stakeholder time requests submitted minimum 5 business days in advance; (c) Weekly check-in with Waters Program Sponsor to identify availability constraints early; (d) Design all workshops for maximum efficiency — no more than 2 hours per session, pre-read materials distributed minimum 2 days in advance.
+Contingency: If a critical Waters resource becomes unavailable for more than 2 weeks, Deloitte to propose interim coverage approach to PMC.
+
+RISK-003: Extraction Accuracy Below Threshold
+Probability: Medium | Impact: High | Overall: HIGH
+Description: The contract metadata extraction accuracy may not achieve the required 90% threshold in UAT, particularly for complex contracts with non-standard structures, scanned documents, or non-English language content.
+Mitigation: (a) Conduct prompt engineering research and optimization in Month 4 before build commences; (b) Build accuracy measurement into each sprint review; (c) Establish human review workflow that catches extraction errors before they propagate; (d) Set progressive accuracy targets by sprint rather than a single end-of-build target.
+Contingency: If accuracy targets are not met by Sprint 7 (November), initiate change order discussion for additional prompt engineering sprints or scope reduction.
+
+RISK-004: Scope Creep from Integration Complexity
+Probability: High | Impact: Medium | Overall: HIGH
+Description: The Waters integration is a dynamic environment. New requirements, new use cases, and expanding stakeholder requests are likely as the program progresses and the AI value becomes visible.
+Mitigation: (a) Rigorous change order discipline — no scope additions without written change order; (b) Maintain a published parking lot for out-of-scope requests; (c) Deloitte Engagement Manager to review all Waters stakeholder requests for scope alignment before committing; (d) Monthly scope health review at PMC.
+Contingency: If accumulated scope change requests exceed $500,000, convene ESC for strategic prioritization discussion.
+
+RISK-005: AI Platform Evolution Disrupting Build
+Probability: Medium | Impact: Medium | Overall: MEDIUM
+Description: Anthropic may release significant Claude updates during the build phase that alter API behavior, pricing, or capability in ways that affect the program.
+Mitigation: (a) Architecture team to monitor Anthropic release notes weekly; (b) All API integrations built with version pinning to prevent unplanned updates; (c) Model version transitions planned and tested before deployment.
+Contingency: Evaluate impact of any major Claude update within 5 business days of release; initiate change order if update requires significant rework.
+
+RISK-006: Data Quality Issues in Financial Reporting Workstream
+Probability: High | Impact: Medium | Overall: HIGH
+Description: Financial data from the BD SAP environment may have quality issues (missing fields, inconsistent classifications, data entry errors) that prevent AI reconciliation from achieving the required accuracy.
+Mitigation: (a) Data quality assessment conducted as part of D-011; (b) Data quality thresholds defined before AI build commences; (c) AI reconciliation designed to flag rather than auto-correct uncertain mappings.
+Contingency: If data quality is below threshold for AI processing, scope AI reconciliation to human-assisted rather than automated mode.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 12 — ROLES AND RESPONSIBILITIES
+
+12.1 RACI Matrix — Key Program Activities
+
+Activity | Deloitte | Waters Program Sponsor | Waters IT Architecture | Waters Legal | Waters CISO
+
+Program Kickoff | A/R | A | I | I | I
+Stakeholder Interviews | R | A | C | C | C
+AI Maturity Assessment | R | A | C | I | I
+AI Governance Framework | R | A | C | A | C
+CLM Requirements | R | A | C | C | I
+Architecture Design | R | I | A | I | A
+Security Review | I | I | C | I | A/R
+Build and Configuration | R | I | C | I | I
+UAT Planning | R | A | I | C | I
+UAT Execution | R/C | A | I | C | I
+UAT Sign-Off | I | A | I | C | I
+Training Delivery | R | A | I | I | I
+Go-Live Decision | C | A | C | I | C
+Production Deployment | R | A | A | I | A
+Hypercare | R | A | I | I | I
+
+R = Responsible, A = Accountable, C = Consulted, I = Informed
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 13 — STAFFING PLAN AND RESOURCE PROFILES
+
+13.1 Deloitte Team Overview
+
+The Deloitte team for this engagement comprises 18 professionals with a combined total of over 220 years of relevant experience.
+
+13.2 Role Profiles
+
+Engagement Partner — Jonathan R. Whitfield
+Qualifications: 24 years with Deloitte; Managing Director in Technology and AI Practice; former Head of Digital Transformation, Life Sciences; led AI integration programs for Thermo Fisher Scientific (2024) and Danaher (2023).
+Time Commitment: 20% throughout engagement
+Responsibilities: Executive client relationship; quality oversight; escalation; ESC participation; Phase 2 commercial lead
+Location: New York, NY
+
+Engagement Manager — Sarah M. Chen
+Qualifications: 12 years consulting experience; 6 years with Deloitte; PMP certified; Anthropic AI professional certification; led 4 enterprise Claude deployments; former product manager at Oracle.
+Time Commitment: 100% throughout engagement
+Responsibilities: Day-to-day program management; PMC lead; deliverable coordination; risk and issue management; commercial tracking; Waters primary point of contact
+Location: Boston, MA (on-site at Milford, MA 2 days per week)
+
+AI Strategy Lead — David K. Park
+Qualifications: 15 years consulting experience; 5 years with Deloitte; PhD Computer Science (MIT); former AI Research Lead at McKinsey; published author on enterprise AI governance; delivered AI governance frameworks for 8 Fortune 500 companies.
+Time Commitment: 80% Months 1-5; 20% Months 6-9
+Responsibilities: AI Maturity Assessment; AI Governance Framework; AI Vendor Recommendation; AI CoE Design; AI Engine governance standards
+Location: New York, NY
+
+CLM Workstream Lead — Priya R. Mehta
+Qualifications: 10 years consulting experience; 4 years with Deloitte; former VP Legal Operations at Pfizer; Ironclad CLM certified; LLM deployment experience across 6 enterprise contract AI projects; expertise in pharmaceutical and life sciences contract management.
+Time Commitment: 100% Months 1-8; 50% Month 9
+Responsibilities: CLM current state assessment; CLM requirements specification; CLM workstream delivery; UAT coordination; training design
+Location: Boston, MA (on-site at Milford, MA 3 days per week)
+
+CLM Technical Architect — Michael T. O'Brien
+Qualifications: 14 years engineering experience; 3 years with Deloitte; former Principal Engineer at Palantir; expert in RAG architecture, vector databases, and document processing pipelines; 5 enterprise Claude deployments; AWS and Azure certified solutions architect.
+Time Commitment: 100% Months 3-8; 50% Months 9
+Responsibilities: Contract metadata extraction architecture; RAG design; document ingestion pipeline; Azure infrastructure; API integrations; security architecture
+Location: Remote (New York, NY) — on-site at Milford, MA for key sessions
+
+Senior CLM Engineer — Kevin J. Zhang
+Qualifications: 8 years software engineering; 2 years with Deloitte; Python, FastAPI, React; LangChain and Anthropic SDK expertise; built 3 enterprise document intelligence systems.
+Time Commitment: 100% Months 4-9
+Responsibilities: CLM system build; frontend development; API development; sprint delivery
+Location: Remote
+
+CLM Engineer — Aisha N. Williams
+Qualifications: 5 years software engineering; 1 year with Deloitte; Python, vector databases (Pinecone, Azure AI Search); document processing; prompt engineering.
+Time Commitment: 100% Months 4-9
+Responsibilities: Extraction pipeline; embedding infrastructure; prompt development and optimization
+Location: Remote
+
+Financial Reporting Lead — Anika S. Patel
+Qualifications: 12 years consulting experience; 4 years with Deloitte; former Finance Director at Roche; SAP and Oracle certified; delivered 3 enterprise financial reporting harmonization programs.
+Time Commitment: 80% Months 1-5; 40% Months 6-9
+Responsibilities: Financial reporting current state assessment; SKU mapping design; reconciliation architecture; pilot BU delivery; close cycle compression roadmap
+Location: Chicago, IL
+
+Financial Reporting Engineer — Thomas H. Mueller
+Qualifications: 7 years engineering experience; 2 years with Deloitte; Python, data pipelines, ML; SAP BAPI integration experience; delivered 2 AI-assisted financial reconciliation systems.
+Time Commitment: 100% Months 4-7
+Responsibilities: SKU mapping engine; reconciliation engine; generative reporting build
+Location: Remote
+
+App Rationalization Lead — Robert J. Thompson
+Qualifications: 16 years consulting experience; 6 years with Deloitte; former CTO at mid-size software company; ServiceNow ITSM expert; delivered 4 enterprise application rationalization programs.
+Time Commitment: 60% Months 2-5
+Responsibilities: Application portfolio assessment; AI rationalization framework design; CMDB assessment
+Location: Dallas, TX
+
+Architecture and Platform Lead — Sunita K. Krishnaswamy
+Qualifications: 18 years enterprise architecture; 5 years with Deloitte; Azure Solutions Architect Expert; Anthropic partner certified; designed AI platforms for 4 Fortune 500 companies.
+Time Commitment: 80% Months 1-4; 40% Months 5-9
+Responsibilities: AI Engine architecture; platform standards; technology selection; security architecture governance; Azure infrastructure oversight
+Location: Seattle, WA
+
+Change Management Lead — Catherine M. Sullivan
+Qualifications: 14 years change management; 5 years with Deloitte; Prosci ADKAR certified; delivered change management for 6 enterprise AI deployments; specialist in AI adoption and human-in-the-loop training.
+Time Commitment: 60% Months 2-4; 80% Months 5-9
+Responsibilities: Stakeholder impact assessment; communications plan; training curriculum; adoption tracking; capability transfer
+Location: Boston, MA
+
+Senior Consultants (x4)
+Qualifications: 4-7 years consulting experience; various specializations across AI, data, process, and change management.
+Time Commitment: 100% each
+Responsibilities: Support across all workstreams; research; documentation; stakeholder interviews; data analysis; UAT support
+
+Consultants / Analysts (x4)
+Qualifications: 1-4 years experience.
+Time Commitment: 100% each
+Responsibilities: Research; documentation; data processing; testing; administrative support
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 14 — FEES, BILLING RATES, AND PAYMENT TERMS
+
+14.1 Fee Structure
+
+This engagement is priced on a time-and-materials basis with a not-to-exceed cap per workstream and in total. Deloitte will track and report actuals against budgets monthly. Waters will not be invoiced for amounts exceeding the not-to-exceed cap without a signed change order.
+
+14.2 Workstream Budgets (Not-to-Exceed)
+
+Workstream 1 — AI Strategy and Governance: $850,000
+Workstream 2 — Contract Lifecycle Management: $1,650,000
+Workstream 3 — Financial Reporting Harmonization: $750,000
+Workstream 4 — Application Rationalization Advisory: $450,000
+AI Engine / Program Management Office: $1,050,000
+Total Program Not-to-Exceed: $4,750,000 USD
+
+14.3 Standard Billing Rates (2026)
+
+Managing Director / Engagement Partner: $625 per hour
+Director / Engagement Manager: $450 per hour
+Senior Manager / Workstream Lead: $395 per hour
+Manager / Technical Architect: $340 per hour
+Senior Consultant / Senior Engineer: $285 per hour
+Consultant / Engineer: $225 per hour
+Analyst: $180 per hour
+
+14.4 Rate Adjustment
+
+Deloitte reserves the right to adjust billing rates for any renewal or extension period (Phase 2 and beyond) by up to 5% annually, with 30 days written notice. Rates for Phase 1 (this SOW) are fixed for the duration of Phase 1.
+
+14.5 Expenses
+
+Reasonable, documented, and pre-approved out-of-pocket expenses will be billed at cost and are not included in the fees set out in Section 14.2. The expense reimbursement policy is set out in Exhibit A. Deloitte estimates that total expenses will not exceed 8% of total fees (estimated $380,000).
+
+Expenses exceeding $5,000 in any single month require prior written approval from Waters Program Sponsor. All expense claims will be accompanied by receipts and submitted with the monthly invoice.
+
+14.6 Invoicing and Payment Terms
+
+Invoices will be issued on the first business day of each calendar month for services rendered and expenses incurred in the immediately preceding month. Each invoice will include:
+- Summary of services performed by workstream
+- Hours worked by role and workstream
+- Expenses with supporting documentation
+- Cumulative spend against workstream budgets
+- Estimated remaining budget by workstream
+
+Payment is due within forty-five (45) days of invoice date.
+
+[RISK NOTE FOR CONTRACT REVIEW: Payment terms are Net 45. Waters enterprise standard is Net 30. This is an AMBER flag.]
+
+Invoices should be submitted electronically to accounts.payable@waters.com with a copy to Seth Bachman (seth.bachman@waters.com).
+
+14.7 Late Payment
+
+Undisputed amounts not paid within forty-five (45) days of invoice date shall accrue interest at the rate of one and one-half percent (1.5%) per month from the date payment was due until the date payment is received.
+
+Waters may withhold payment of disputed amounts provided Waters notifies Deloitte in writing within fifteen (15) business days of invoice receipt, specifying in reasonable detail the nature of the dispute and the amount in question. The parties will use good faith efforts to resolve invoice disputes within thirty (30) days of notification.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 15 — INTELLECTUAL PROPERTY
+
+15.1 Waters-Specific Deliverables
+
+Subject to full payment of all fees and expenses due under this SOW, all deliverables created specifically and exclusively for Waters under this SOW — including reports, analyses, frameworks, specifications, configured systems, and documented methodologies developed solely for Waters — shall become the exclusive property of Waters Corporation upon delivery and payment, with all associated intellectual property rights assigned to Waters.
+
+15.2 Deloitte Pre-Existing Intellectual Property
+
+Deloitte retains all right, title, and interest in and to all pre-existing intellectual property, including but not limited to:
+- The Deloitte Accelerate AI™ methodology and all components thereof
+- Deloitte proprietary AI tools, platforms, accelerators, and templates
+- Deloitte standard project management tools, frameworks, and templates
+- General knowledge, skills, and experience of Deloitte personnel
+- Any Deloitte intellectual property existing prior to the Effective Date
+
+15.3 Deliverables Incorporating Deloitte Pre-Existing IP
+
+To the extent any deliverable incorporates Deloitte's pre-existing intellectual property (including any Accelerate AI™ methodology components embedded in governance frameworks, process designs, or system configurations), Deloitte grants Waters a non-exclusive, non-transferable, perpetual license to use such embedded Deloitte IP solely for Waters' internal business purposes in connection with the specific deliverable in which it is embedded.
+
+[RISK NOTE FOR CONTRACT REVIEW: This is a significant IP risk. The Accelerate AI™ methodology is likely embedded in virtually all deliverables. Waters does not receive full ownership — only a non-exclusive license. Furthermore, the license is non-transferable, meaning Waters cannot assign it to a successor company without Deloitte's consent. Waters' standard requires full assignment of all custom IP. This clause falls materially below Waters' standard and should be negotiated to require full assignment of all deliverables with Deloitte retaining only rights to its generic methodologies. This is a RED flag.]
+
+15.4 No Rights in AI Models
+
+For the avoidance of doubt, Deloitte does not and cannot transfer to Waters any rights in any large language model, AI platform, or AI tooling licensed from third parties (including Anthropic Claude). Waters' rights to such models and tools are governed by the applicable third-party vendor agreements entered into by Waters directly.
+
+15.5 Open Source Components
+
+The CLM AI system and financial reporting tools built under this SOW may incorporate open-source software components. Deloitte will provide a complete software bill of materials (SBOM) identifying all open-source components, their licenses, and any obligations those licenses impose on Waters.
+
+15.6 Code Repository
+
+All code produced under this SOW will be developed in and committed to a Waters-controlled code repository (Azure DevOps or equivalent) designated by Waters. Deloitte will not retain the sole copy of any production code. Upon completion of each sprint, Deloitte will ensure all code is committed and accessible to Waters.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 16 — CONFIDENTIALITY AND DATA PROTECTION
+
+16.1 Mutual Confidentiality Obligations
+
+Each party agrees to: (a) hold the other party's Confidential Information in strict confidence using at least the same degree of care it applies to its own confidential information, but no less than reasonable care; (b) not disclose Confidential Information to any third party without the prior written consent of the disclosing party, except as permitted in this Section; (c) use Confidential Information solely for the purposes of this SOW; and (d) limit disclosure of Confidential Information to personnel who have a legitimate need to know and who are bound by confidentiality obligations at least as protective as those in this Section.
+
+16.2 Permitted Disclosures
+
+Each party may disclose Confidential Information: (a) to its attorneys, accountants, and financial advisors who are bound by professional confidentiality obligations; (b) to subcontractors and consultants who are bound by written confidentiality agreements no less protective than this Section; (c) as required by law, regulation, or court order, provided that the disclosing party gives the other party prompt written notice (to the extent legally permitted) and cooperates in seeking a protective order.
+
+16.3 Duration of Confidentiality Obligations
+
+Confidentiality obligations under this Section shall survive the termination or expiration of this SOW for a period of three (3) years.
+
+[RISK NOTE FOR CONTRACT REVIEW: Waters' enterprise standard requires five (5) years post-termination confidentiality. This clause provides only three (3) years. Given the sensitivity of contract data, financial information, and integration strategy that will be shared under this SOW, the shorter duration represents a meaningful risk. This is an AMBER flag and should be negotiated to five years.]
+
+16.4 Return or Destruction of Confidential Information
+
+Upon termination or expiration of this SOW, or upon written request from the disclosing party, the receiving party shall promptly return or destroy all copies of the disclosing party's Confidential Information in its possession, and shall certify in writing that such return or destruction is complete. Notwithstanding the foregoing, each party may retain copies of Confidential Information to the extent required by applicable law or regulation, subject to continued confidentiality obligations.
+
+16.5 Survival
+
+The confidentiality obligations in this Section shall survive termination of this SOW.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 17 — LIMITATION OF LIABILITY
+
+17.1 Liability Cap
+
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, DELOITTE'S TOTAL CUMULATIVE LIABILITY TO WATERS ARISING OUT OF OR RELATED TO THIS SOW, REGARDLESS OF THE FORM OF ACTION AND WHETHER IN CONTRACT, TORT, STRICT LIABILITY, OR OTHERWISE, SHALL NOT EXCEED THE TOTAL FEES ACTUALLY PAID TO DELOITTE UNDER THIS SOW DURING THE TWELVE (12) CALENDAR MONTHS IMMEDIATELY PRECEDING THE EVENT OR OMISSION GIVING RISE TO THE CLAIM.
+
+[RISK NOTE FOR CONTRACT REVIEW: The liability cap is defined as fees paid in the prior 12 months. This SOW runs for 9 months. Depending on the timing of a claim:
+- If a claim arises at Month 3: liability cap = approximately $1.58M (3/9 × $4.75M), which is above Waters' $1M minimum threshold.
+- If a claim arises at Month 1: liability cap = approximately $527K (1/9 × $4.75M), which is below Waters' $1M minimum threshold.
+The variable nature of this cap means it may fall below Waters' required minimum during early months of the engagement. Additionally, no fixed dollar minimum is stated. Waters standard requires a fixed minimum cap of $1,000,000 USD. This is an AMBER/RED flag depending on when a claim might arise. Waters should negotiate a floor of $1,000,000 USD regardless of fees paid in the prior 12 months.]
+
+17.2 Exclusion of Consequential Damages
+
+IN NO EVENT SHALL EITHER PARTY BE LIABLE TO THE OTHER FOR ANY INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, PUNITIVE, OR CONSEQUENTIAL DAMAGES, INCLUDING WITHOUT LIMITATION LOST PROFITS, LOST REVENUES, LOSS OF DATA, LOSS OF BUSINESS OPPORTUNITY, OR BUSINESS INTERRUPTION, EVEN IF SUCH PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+17.3 Essential Basis
+
+The parties acknowledge that the limitations of liability set forth in this Section reflect a reasonable allocation of risk that formed a material part of the consideration for this Agreement, and that Deloitte would not have entered into this Agreement at the fees set forth herein without such limitations.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 18 — TERMINATION
+
+18.1 Termination for Convenience
+
+Either party may terminate this SOW for convenience upon sixty (60) days prior written notice to the other party.
+
+[RISK NOTE FOR CONTRACT REVIEW: Waters enterprise standard requires only thirty (30) days notice for termination for convenience. This clause requires sixty (60) days notice, which is twice the Waters standard. During an integration with rapidly changing priorities, the ability to terminate quickly is valuable. Waters should negotiate this to 30 days. This is an AMBER flag.]
+
+18.2 Termination for Material Breach
+
+Either party may terminate this SOW upon written notice if the other party commits a material breach of this SOW and fails to cure such breach within thirty (30) days of receiving written notice from the non-breaching party specifying the breach in reasonable detail.
+
+[RISK NOTE FOR CONTRACT REVIEW: Waters enterprise standard allows a cure period of no more than ten (10) business days for remediable breaches. This clause provides thirty (30) calendar days — three times longer than Waters' standard. If Deloitte commits a material breach (e.g., missing a critical milestone, data security failure), Waters must wait 30 days before it can terminate, during which TSA exposure may be accumulating. This is an AMBER flag and should be negotiated to 10 business days for remediable breaches and immediate termination for certain defined material breaches (data security incidents, regulatory violations).]
+
+18.3 Termination for Insolvency
+
+Either party may terminate this SOW immediately upon written notice if the other party: (a) becomes insolvent; (b) makes a general assignment for the benefit of creditors; (c) has a receiver, liquidator, or trustee appointed; (d) files for voluntary bankruptcy or has an involuntary bankruptcy petition filed against it that is not dismissed within 60 days; or (e) ceases to carry on business in the ordinary course.
+
+18.4 Effect of Termination
+
+Upon termination of this SOW for any reason: (a) Waters shall pay Deloitte all fees for services actually performed and expenses actually incurred through the effective date of termination; (b) Deloitte shall cease all work and shall deliver to Waters all completed deliverables and all work-in-progress materials in their current state; (c) Each party shall promptly return or destroy the other party's Confidential Information; (d) Provisions that by their nature should survive termination shall survive, including Sections 15, 16, 17, and 22.
+
+18.5 No Termination Fee
+
+There is no termination fee payable by Waters upon termination for convenience, beyond payment of fees for services performed and expenses incurred through the effective date of termination.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 19 — DATA SECURITY AND COMPLIANCE
+
+19.1 Security Standards
+
+Deloitte shall implement and maintain information security policies, procedures, and technical controls that comply with: (a) the requirements of Deloitte's Global Information Security Policy; and (b) all applicable data protection laws and regulations.
+
+19.2 Encryption
+
+Deloitte shall encrypt Waters' Confidential Information and data: (a) in transit using Transport Layer Security (TLS) 1.2 or higher; and (b) at rest using commercially standard encryption.
+
+[RISK NOTE FOR CONTRACT REVIEW: Waters enterprise standard requires AES-256 minimum encryption at rest. This clause commits only to "commercially standard encryption" — a vague standard that does not specify AES-256. Waters should require explicit AES-256 commitment. This is an AMBER flag.]
+
+19.3 Access Controls
+
+Deloitte shall implement role-based access controls ensuring that access to Waters' Confidential Information is limited to Deloitte personnel who require such access to perform the Services. Deloitte shall maintain logs of access to Waters' systems and data.
+
+19.4 Data Breach Notification
+
+In the event of a confirmed unauthorized access to or disclosure of Waters' Confidential Information, Deloitte shall notify Waters within a commercially reasonable time following Deloitte's confirmation of the breach, and shall cooperate with Waters in any investigation and remediation.
+
+[RISK NOTE FOR CONTRACT REVIEW: "Commercially reasonable time" is undefined and does not satisfy Waters' enterprise standard of twenty-four (24) hours. A breach notification timeline of "commercially reasonable" time could mean days or weeks. Given that the CLM system will process sensitive contract data and financial information, a 24-hour notification standard is essential. This is a RED flag and should be specifically negotiated to 24 hours or less.]
+
+19.5 Data Residency
+
+Deloitte shall ensure that Waters' Confidential Information is processed and stored only within the Azure environment designated by Waters and shall not transfer such data to any other environment without Waters' prior written consent.
+
+19.6 Security Assessments
+
+Waters shall have the right to request Deloitte's most recent SOC 2 Type II report upon written request. Waters may also request completion of Waters' standard vendor security questionnaire once per calendar year.
+
+[RISK NOTE FOR CONTRACT REVIEW: Waters enterprise standard includes direct audit rights with 10 business days notice. This clause limits Waters to reviewing a SOC 2 report and completing a questionnaire — not conducting a direct audit. For a program involving sensitive contract and financial data, direct audit rights are important. This is an AMBER flag.]
+
+19.7 Regulatory Compliance
+
+Deloitte shall comply with all applicable laws and regulations in the performance of Services, including data protection laws (GDPR where applicable, CCPA where applicable), export control regulations (ITAR, EAR), and anti-bribery and anti-corruption laws (FCPA, UK Bribery Act).
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 20 — SUBCONTRACTING
+
+20.1 Right to Subcontract
+
+Deloitte may engage subcontractors and affiliated Deloitte member firms in the delivery of services under this SOW. Deloitte will notify Waters of any material subcontracting arrangements prior to engagement of the subcontractor but does not require Waters' prior written approval for subcontracting to Deloitte affiliate entities or pre-approved subcontractors listed in Exhibit D.
+
+[RISK NOTE FOR CONTRACT REVIEW: Waters enterprise standard requires prior written approval for all material subcontracting. This clause requires only prior notification — not approval — for Deloitte affiliates and pre-approved subcontractors. Given that Deloitte's pre-approved subcontractor list (Exhibit D) may be broad, Waters could find significant portions of the engagement performed by entities it has not specifically approved. Waters should negotiate to require prior written approval for any subcontractor that will have access to Waters Confidential Information, regardless of whether they are a Deloitte affiliate. This is a RED flag.]
+
+20.2 Responsibility for Subcontractors
+
+Deloitte shall remain fully responsible for the performance of its subcontractors to the same extent as if Deloitte had performed the services directly. Deloitte shall ensure that all subcontractors handling Waters' Confidential Information are bound by confidentiality and data security obligations no less protective than those in this SOW.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 21 — WARRANTIES AND QUALITY ASSURANCE
+
+21.1 Service Warranty
+
+Deloitte warrants that Services will be performed: (a) in a professional and workmanlike manner; (b) by personnel with appropriate qualifications and experience; (c) in accordance with applicable professional standards; and (d) in material compliance with the requirements of this SOW.
+
+21.2 Deliverable Warranty
+
+Deloitte warrants that each deliverable will materially conform to the specifications set forth in Section 5 of this SOW. Waters must notify Deloitte in writing of any claimed non-conformance within thirty (30) days of delivery of the deliverable. Upon receipt of a timely written non-conformance notice, Deloitte shall use commercially reasonable efforts to correct the non-conforming deliverable within a commercially reasonable time at no additional cost to Waters.
+
+[RISK NOTE FOR CONTRACT REVIEW: Waters enterprise standard requires a ninety (90) day warranty period on deliverables. This clause effectively provides only a thirty (30) day notification window with no defined remedy period. Additionally, "commercially reasonable time" for correction is undefined. Waters should negotiate: (a) a 90-day warranty period during which Waters may identify non-conformances; and (b) a defined correction timeline (e.g., 10 business days for critical non-conformances). This is an AMBER flag.]
+
+21.3 Compliance Warranty
+
+Deloitte warrants that it will comply with all applicable laws, regulations, and professional standards in the performance of the Services.
+
+21.4 No Other Warranties
+
+EXCEPT AS EXPRESSLY SET FORTH IN THIS SECTION, DELOITTE MAKES NO WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. DELOITTE DOES NOT WARRANT THAT ANY AI OUTPUTS WILL BE ERROR-FREE OR FREE FROM HALLUCINATION.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 22 — GOVERNING LAW AND DISPUTE RESOLUTION
+
+22.1 Governing Law
+
+This SOW shall be governed by and construed in accordance with the laws of the State of New York, without regard to its conflict of laws principles.
+
+[RISK NOTE FOR CONTRACT REVIEW: Waters enterprise standard is Massachusetts governing law. Deloitte's standard is New York law. New York is not inherently unfavorable, but it is not Waters' preferred jurisdiction. Waters should attempt to negotiate Massachusetts law. If New York is accepted, Waters should confirm that New York law does not materially disadvantage Waters on any of the key provisions (IP, liability, termination). This is an AMBER flag.]
+
+22.2 Dispute Resolution
+
+Any dispute arising out of or in connection with this SOW that is not resolved through ordinary program management channels shall be escalated as follows:
+
+Step 1 — Executive Negotiation: Senior representatives of both parties shall meet (in person or by videoconference) within fifteen (15) business days of written notice of a dispute and shall negotiate in good faith to resolve the dispute for a period of up to thirty (30) days.
+
+Step 2 — Mediation: If the dispute is not resolved through executive negotiation, either party may request non-binding mediation. The parties shall agree on a mutually acceptable mediator within fifteen (15) business days and shall conduct mediation within thirty (30) days of the mediator's appointment.
+
+Step 3 — Litigation: If mediation does not resolve the dispute, the parties may pursue their legal remedies in the courts of competent jurisdiction in the State of New York.
+
+[RISK NOTE FOR CONTRACT REVIEW: Waters enterprise standard requires binding arbitration before litigation. This clause proceeds to litigation after mediation, skipping arbitration. Waters should negotiate to add a binding arbitration step between mediation and litigation, which is typically faster and less expensive than court proceedings. This is an AMBER flag.]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 23 — INSURANCE REQUIREMENTS
+
+23.1 Required Coverages
+
+Deloitte shall maintain throughout the term of this SOW the following minimum insurance coverages with financially sound insurers:
+
+Commercial General Liability
+Per occurrence limit: $1,000,000
+General aggregate limit: $2,000,000
+Products/completed operations: $1,000,000
+Personal and advertising injury: $1,000,000
+
+Professional Liability (Errors and Omissions)
+Per claim limit: $5,000,000
+Annual aggregate: $10,000,000
+
+Cyber Liability and Technology Errors and Omissions
+Per occurrence limit: $3,000,000
+Annual aggregate: $5,000,000
+
+[RISK NOTE FOR CONTRACT REVIEW: Waters enterprise standard for cyber liability is $5,000,000 per occurrence. This clause provides only $3,000,000 per occurrence. Given that the CLM system and financial reporting tools will process sensitive contract and financial data, a $3M per-occurrence cyber liability limit may be insufficient in the event of a significant data breach. Waters should negotiate to $5M per occurrence. This is an AMBER flag.]
+
+Workers Compensation and Employer's Liability
+Workers compensation: As required by applicable law
+Employer's liability: $1,000,000 per accident
+
+Umbrella / Excess Liability
+Per occurrence: $5,000,000
+Annual aggregate: $10,000,000
+
+23.2 Additional Insured and Certificate
+
+Deloitte shall name Waters Corporation as an additional insured on the Commercial General Liability policy. Deloitte shall provide Waters with certificates of insurance evidencing the required coverages within ten (10) business days of Waters' written request and annually thereafter.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 24 — GENERAL TERMS AND CONDITIONS
+
+24.1 Entire Agreement
+
+This SOW, together with the Master Professional Services Agreement dated January 15, 2026 and all exhibits attached hereto, constitutes the entire agreement between the parties with respect to the subject matter hereof and supersedes all prior and contemporaneous understandings, agreements, representations, and warranties, whether oral or written.
+
+24.2 Amendments
+
+This SOW may be amended only by a written instrument signed by authorized representatives of both parties. No oral agreement, email, or other informal communication shall constitute an amendment to this SOW. All proposed amendments shall follow the change order process defined in Exhibit F.
+
+24.3 Waiver
+
+No waiver of any provision of this SOW shall be effective unless in writing signed by the waiving party. No waiver shall be construed as a waiver of any other provision or as a continuing waiver of the same provision.
+
+24.4 Severability
+
+If any provision of this SOW is held by a court of competent jurisdiction to be invalid, illegal, or unenforceable, such provision shall be modified to the minimum extent necessary to make it valid and enforceable, and the remaining provisions shall continue in full force and effect.
+
+24.5 Force Majeure
+
+Neither party shall be liable for any failure or delay in the performance of its obligations (other than payment obligations) under this SOW to the extent such failure or delay is caused by circumstances beyond such party's reasonable control, including acts of God, natural disasters, pandemics (excluding COVID-19 unless a new government-mandated shutdown is imposed), war, terrorism, cyberattacks on third-party infrastructure, or government action. The affected party shall provide written notice within five (5) business days of the occurrence and shall use commercially reasonable efforts to resume performance as soon as practicable. If a force majeure event continues for more than ninety (90) days, either party may terminate the affected SOW or portions thereof without penalty upon ten (10) days written notice.
+
+24.6 Non-Solicitation
+
+During the term of this SOW and for a period of twelve (12) months following its termination or expiration, neither party shall directly solicit for employment or directly hire any employee of the other party who was materially involved in this engagement, without the prior written consent of the other party. General solicitations through public job postings shall not constitute a breach of this provision.
+
+24.7 Independent Contractor
+
+Deloitte is an independent contractor of Waters. Nothing in this SOW shall be construed to create an employment, partnership, joint venture, or agency relationship between the parties or any of their respective personnel.
+
+24.8 Assignment
+
+Neither party may assign this SOW or any of its rights or obligations hereunder without the prior written consent of the other party, except that either party may assign this SOW without consent to (a) a successor entity in connection with a merger, acquisition, or sale of all or substantially all of its assets, provided that the assignee assumes all obligations under this SOW. Any purported assignment in violation of this provision shall be void.
+
+24.9 Publicity
+
+Neither party shall issue any press release, public statement, or marketing material referencing this engagement without the prior written consent of the other party.
+
+24.10 Counterparts and Electronic Signatures
+
+This SOW may be executed in counterparts, each of which shall be deemed an original, and all of which together shall constitute one and the same instrument. Electronic signatures shall be deemed valid and binding to the same extent as original signatures.
+
+24.11 Notices
+
+All notices required under this SOW shall be in writing and delivered by: (a) email with confirmation of receipt; (b) overnight courier; or (c) certified mail, return receipt requested, to the addresses set forth in the signature block.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 25 — SIGNATURES
+
+By signing below, the duly authorized representatives of each party agree to be bound by all terms and conditions of this Statement of Work.
+
+DELOITTE CONSULTING LLP
+
+Signature: _______________________________
+Printed Name: Jonathan R. Whitfield
+Title: Managing Director, Technology and AI Practice
+Date: ___________________________
+Address: 30 Rockefeller Plaza, New York, NY 10112
+Email: jwhitfield@deloitte.com
+Phone: +1 (212) 492-4128
+
+WATERS CORPORATION
+
+Signature: _______________________________
+Printed Name: ___________________________
+Title: ___________________________
+Date: ___________________________
+Address: 34 Maple Street, Milford, MA 01757
+Email: ___________________________
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+EXHIBIT A — EXPENSE REIMBURSEMENT POLICY
+
+A.1 General Policy
+Deloitte will be reimbursed for reasonable and documented out-of-pocket expenses directly related to the performance of Services under this SOW. All expenses must be submitted with original receipts and submitted monthly with invoices.
+
+A.2 Air Travel
+Domestic flights under 4 hours: economy class only
+Domestic flights over 4 hours: economy class (business class requires prior written approval from Waters Program Sponsor)
+International flights: business class permitted
+Advance booking: minimum 7 days in advance where operationally practical
+Airline status upgrades using personal points/miles are not reimbursable
+
+A.3 Ground Transportation
+Rental car: permitted when public transport is not reasonably available; standard class vehicle only
+Ride-share and taxi: permitted; receipts required for amounts over $25
+Personal vehicle mileage: reimbursed at current IRS standard mileage rate
+Parking: reimbursed with receipt
+
+A.4 Hotel Accommodation
+Major metropolitan areas (New York, Boston, San Francisco, Los Angeles, Chicago, Washington DC): not to exceed $350 per night
+Other US locations: not to exceed $275 per night
+International: not to exceed $300 per night (local currency equivalent)
+Hotel loyalty points and upgrades using personal points are not reimbursable; base room rate only
+
+A.5 Meals
+Daily per diem: $75 per person per day (receipts required for amounts over $25)
+Business meals with Waters personnel: up to $100 per person with prior written approval from Waters Program Sponsor
+Alcohol: not reimbursable unless included in a business meal approved by Waters Program Sponsor
+
+A.6 Client Entertainment
+Client entertainment (events, activities, sporting events, performances): requires prior written approval from Waters Program Sponsor; not to exceed $150 per person per event; alcohol costs not separately reimbursable
+
+A.7 Technology and Communications
+Mobile phone roaming charges: reimbursed with documentation
+Printing and document production directly related to engagement deliverables: reimbursed with receipt
+Software or technology purchases above $500: require prior written approval from Waters Program Sponsor
+
+A.8 Expenses Not Reimbursable
+Personal expenses of any kind; traffic fines, parking tickets, or similar violations; first-class air travel without prior written approval; hotel amenity fees (minibar, room service, spa, gym) not pre-approved; personal entertainment
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+EXHIBIT B — DELIVERABLE ACCEPTANCE PROCESS
+
+B.1 Delivery Notification
+Deloitte shall notify Waters in writing (email acceptable) when a deliverable is ready for review. Notification shall include: deliverable reference number, deliverable title, delivery date, and review deadline.
+
+B.2 Review Period
+Waters shall review each deliverable within the timeframe specified in Section 5 for that deliverable (typically 10 or 15 business days).
+
+B.3 Feedback Process
+Waters shall provide feedback using the standard feedback template (available from Deloitte Engagement Manager). Feedback shall categorize comments as: (a) Critical — must be resolved before acceptance; (b) Important — should be resolved in revised version; (c) Minor — optional for acceptance.
+
+B.4 Revision
+Deloitte shall provide a revised version addressing Waters' Critical and Important comments within 5 business days of receiving Waters' feedback.
+
+B.5 Acceptance
+Acceptance shall be confirmed by Waters in writing (email from Waters Program Sponsor acceptable). A deliverable shall be deemed accepted if: (a) Waters provides written acceptance; or (b) Waters does not provide feedback within the specified review period.
+
+B.6 Disputed Acceptance
+If Waters rejects a revised deliverable, the dispute shall be escalated to the Program Management Committee for resolution.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+EXHIBIT C — KEY PERSONNEL PROFILES
+
+[Full CVs of all 18 Deloitte team members provided as separate attachment DC-WATERS-2026-CVS-001]
+
+Key Personnel designation: The following individuals are designated as Key Personnel whose continued assignment to this engagement is material to Waters' decision to engage Deloitte. Deloitte may not substitute Key Personnel without Waters' prior written consent (not to be unreasonably withheld), except in cases of voluntary resignation, long-term illness, or termination of employment, in which case Deloitte shall provide 10 business days notice and propose a replacement with equivalent qualifications.
+
+Key Personnel:
+1. Jonathan R. Whitfield — Engagement Partner
+2. Sarah M. Chen — Engagement Manager
+3. David K. Park — AI Strategy Lead
+4. Priya R. Mehta — CLM Workstream Lead
+5. Michael T. O'Brien — CLM Technical Architect
+6. Anika S. Patel — Financial Reporting Lead
+7. Sunita K. Krishnaswamy — Architecture and Platform Lead
+8. Catherine M. Sullivan — Change Management Lead
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+EXHIBIT D — APPROVED SUBCONTRACTORS
+
+The following entities are pre-approved for use as subcontractors under this SOW:
+
+1. Deloitte & Touche LLP (Deloitte affiliate — US audit/tax; used for quality review only)
+2. Deloitte Digital (Deloitte affiliate — UX/design support if required)
+3. Deloitte India Private Limited (Deloitte affiliate — offshore analytical support; all access governed by Deloitte data security policy; no Waters Confidential Information to be processed offshore without separate written approval from Waters CISO)
+4. TechCognition LLC — AI engineering staffing firm; used for supplemental engineering resources subject to Deloitte's standard vendor confidentiality agreement
+
+Any use of subcontractors not on this list requires prior written approval from Waters Program Sponsor.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+EXHIBIT E — WATERS TECHNOLOGY LANDSCAPE SUMMARY
+
+[Waters technology landscape as understood by Deloitte at time of SOW preparation — to be validated and updated during Phase A discovery]
+
+ERP: Oracle Financials (Waters legacy); SAP ECC 6.0 (BD legacy)
+CRM: Salesforce (both entities)
+HR: SuccessFactors (Waters); Workday (BD) — consolidation TBD
+ITSM: ServiceNow (Waters); Remedy (BD — being migrated to ServiceNow)
+CMDB: ServiceNow CMDB (Waters — completeness estimated at 60-70%)
+Procurement: Ariba (Waters — partial deployment)
+Cloud: Microsoft Azure (primary); some AWS usage in BD environment
+Collaboration: Microsoft 365 (Teams, SharePoint, Outlook) — both entities
+Identity: Azure Active Directory (Waters); Okta (BD — migration to AAD planned)
+Document Management: SharePoint (Waters); various SharePoint and shared drives (BD)
+Monitoring: Datadog (Waters infrastructure); Azure Monitor
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+EXHIBIT F — CHANGE ORDER PROCESS AND TEMPLATE
+
+F.1 Change Order Process
+Step 1: Either party identifies a proposed change to scope, timeline, fees, or resources.
+Step 2: Requesting party documents the proposed change using the Change Order Request template below.
+Step 3: Deloitte Engagement Manager assesses impact on scope, timeline, and fees within 5 business days.
+Step 4: Deloitte presents Change Order for Waters review and approval per approval thresholds in Section 7.3.
+Step 5: Upon written approval by both parties, change is incorporated into the program.
+Step 6: No change is binding until the Change Order is signed by both parties.
+
+F.2 Change Order Request Template
+
+Change Order Number: CO-WATERS-2026-[XXX]
+Date Requested: _______________
+Requested By: _______________
+Workstream Affected: _______________
+
+Description of Proposed Change:
+[Describe the proposed change in detail]
+
+Reason for Change:
+[Explain why this change is needed]
+
+Impact on Scope:
+[Describe what is being added, removed, or modified]
+
+Impact on Timeline:
+[Describe any changes to milestone dates or the overall program end date]
+
+Impact on Fees:
+[Provide fee estimate for the change; if time-and-materials, provide estimated hours by role]
+Estimated Additional Fee: $_______________
+Estimated Fee Reduction (if applicable): $_______________
+Net Fee Impact: $_______________
+
+Approval Required: [ ] Waters Program Sponsor [ ] Waters CIO/ESC (per Section 7.3)
+
+DELOITTE APPROVAL: _______________ Date: _______________
+WATERS APPROVAL: _______________ Date: _______________
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+EXHIBIT G — MEETING CADENCE AND REPORTING CALENDAR
+
+G.1 Standing Meeting Schedule
+
+Executive Steering Committee: Last Thursday of each month, 8:00-9:00 AM Eastern
+Program Management Committee: Every other Tuesday, 10:00-11:00 AM Eastern
+WOC-1 AI Strategy: Mondays 2:00-3:00 PM Eastern (weekly)
+WOC-2 CLM: Tuesdays 2:00-3:00 PM Eastern (weekly)
+WOC-3 Financial Reporting: Wednesdays 2:00-3:00 PM Eastern (weekly)
+WOC-4 App Rationalization: Thursdays 2:00-3:00 PM Eastern (biweekly)
+Sprint Planning: First Monday of each sprint, 9:00-11:00 AM Eastern
+Sprint Review/Demo: Last Friday of each sprint, 1:00-2:00 PM Eastern
+Sprint Retrospective: Last Friday of each sprint, 2:00-2:30 PM Eastern
+
+G.2 Reporting Deliverables
+
+Weekly Workstream Status Email: Every Friday by 5:00 PM Eastern (Deloitte to Waters workstream lead)
+Biweekly PMC Deck: Delivered by Deloitte to Waters Program Sponsor 24 hours before PMC meeting
+Monthly ESC Deck: Delivered by Deloitte to Waters Program Sponsor 48 hours before ESC meeting
+Monthly Invoice: First business day of each month for prior month's services
+Monthly Value Realization Report: Last business day of each month (from Month 3 onwards)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+END OF STATEMENT OF WORK
+
+Document Reference: DC-WATERS-2026-SOW-0042 v3.1
+Classification: Confidential — For Authorized Waters Personnel Only
+Prepared by: Deloitte Consulting LLP — Technology and AI Practice
+Last Modified: April 14, 2026
+Total Pages: [as rendered]
+
+For questions regarding this document, contact:
+Sarah M. Chen, Engagement Manager
+sarah.chen@deloitte.com | +1 (617) 555-0147
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

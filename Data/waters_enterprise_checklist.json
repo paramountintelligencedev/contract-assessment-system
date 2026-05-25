@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "name": "Liability Cap",
+    "description": "Contract must state a maximum liability cap of at least $1,000,000 USD. Caps below $500K are automatically RED. Caps between $500K and $1M are AMBER.",
+    "required": true,
+    "risk_level": "high",
+    "waters_standard": "Minimum $1,000,000 USD or equivalent to total contract value, whichever is greater"
+  },
+  {
+    "id": 2,
+    "name": "IP Ownership",
+    "description": "All intellectual property, work products, deliverables, and custom developments created under this agreement must be fully assigned to Waters Corporation. Shared or retained vendor IP is not acceptable.",
+    "required": true,
+    "risk_level": "high",
+    "waters_standard": "Full assignment of all custom IP to Waters Corporation upon creation"
+  },
+  {
+    "id": 3,
+    "name": "Termination for Convenience",
+    "description": "Waters must have the right to terminate the agreement for any reason with no more than 30 days written notice. Longer notice periods or financial penalties for termination for convenience are not acceptable.",
+    "required": true,
+    "risk_level": "high",
+    "waters_standard": "Termination for convenience with 30 days written notice, no penalty"
+  },
+  {
+    "id": 4,
+    "name": "Termination for Cause",
+    "description": "Waters must have the right to terminate immediately for material breach, insolvency, or regulatory non-compliance. A cure period of no more than 10 business days is acceptable for remediable breaches.",
+    "required": true,
+    "risk_level": "high",
+    "waters_standard": "Immediate termination for cause; 10 business day cure period for remediable breach"
+  },
+  {
+    "id": 5,
+    "name": "Data Security and Confidentiality",
+    "description": "Vendor must comply with Waters' data security standards including encryption in transit and at rest, access controls, audit logging, and incident response. Vendor must notify Waters of any data breach within 24 hours of discovery.",
+    "required": true,
+    "risk_level": "high",
+    "waters_standard": "ISO 27001 or equivalent; 24-hour breach notification; encryption AES-256 minimum"
+  },
+  {
+    "id": 6,
+    "name": "Confidentiality and NDA",
+    "description": "Mutual confidentiality obligations must be included. Confidential information must be protected for a minimum of 5 years following disclosure or the term of the agreement, whichever is longer.",
+    "required": true,
+    "risk_level": "high",
+    "waters_standard": "Mutual NDA; 5-year post-termination confidentiality obligation minimum"
+  },
+  {
+    "id": 7,
+    "name": "Auto-Renewal Clause",
+    "description": "If the contract includes auto-renewal, Waters must receive written notice at least 60 days before the renewal date with an explicit opt-out window of at least 30 days. Silent auto-renewal with less than 30 days notice is not acceptable.",
+    "required": true,
+    "risk_level": "medium",
+    "waters_standard": "60 days advance notice of renewal; 30 days opt-out window minimum"
+  },
+  {
+    "id": 8,
+    "name": "Payment Terms",
+    "description": "Standard payment terms are Net 30 from receipt of undisputed invoice. Net 15 or shorter payment terms are not acceptable without written approval from Waters Finance.",
+    "required": true,
+    "risk_level": "medium",
+    "waters_standard": "Net 30 from receipt of undisputed invoice"
+  },
+  {
+    "id": 9,
+    "name": "Governing Law and Jurisdiction",
+    "description": "The contract must specify a governing law and jurisdiction. Waters prefers the State of Massachusetts, USA. Disputes should be subject to binding arbitration before litigation.",
+    "required": true,
+    "risk_level": "medium",
+    "waters_standard": "State of Massachusetts, USA; binding arbitration before litigation"
+  },
+  {
+    "id": 10,
+    "name": "Service Level Agreement (SLA)",
+    "description": "For professional services engagements, the contract must define response times, escalation procedures, and remedies for SLA breaches. Remedy must include service credits or the right to terminate for persistent failure.",
+    "required": true,
+    "risk_level": "medium",
+    "waters_standard": "Defined SLAs with measurable KPIs; service credits for breach; termination right for persistent failure"
+  },
+  {
+    "id": 11,
+    "name": "Subcontracting",
+    "description": "Vendor must obtain prior written approval from Waters before subcontracting any material portion of the services. Vendor remains fully liable for the performance of any approved subcontractors.",
+    "required": true,
+    "risk_level": "medium",
+    "waters_standard": "Prior written approval required; vendor retains full liability for subcontractor performance"
+  },
+  {
+    "id": 12,
+    "name": "Audit Rights",
+    "description": "Waters must have the right to audit vendor's compliance with contractual obligations, including data security practices, with reasonable notice. Audits may be conducted by Waters or an appointed third party.",
+    "required": true,
+    "risk_level": "medium",
+    "waters_standard": "Annual audit rights with 10 business days notice; third-party auditor permitted"
+  },
+  {
+    "id": 13,
+    "name": "Force Majeure",
+    "description": "The contract must define force majeure events and specify that obligations are suspended only for the duration of the event. Pandemics, cyber events not caused by the affected party, and government actions are acceptable force majeure events. Economic hardship is not.",
+    "required": false,
+    "risk_level": "low",
+    "waters_standard": "Standard force majeure; obligations suspended for event duration only; economic hardship excluded"
+  },
+  {
+    "id": 14,
+    "name": "Non-Solicitation",
+    "description": "Neither party should solicit or hire the other party's employees during the term and for 12 months following termination.",
+    "required": false,
+    "risk_level": "low",
+    "waters_standard": "Mutual non-solicitation for 12 months post-termination"
+  },
+  {
+    "id": 15,
+    "name": "Regulatory Compliance",
+    "description": "Vendor must comply with all applicable laws and regulations including export controls, anti-bribery (FCPA/UK Bribery Act), data privacy (GDPR/CCPA where applicable), and life sciences industry regulations relevant to the services.",
+    "required": true,
+    "risk_level": "high",
+    "waters_standard": "Full compliance with FCPA, UK Bribery Act, GDPR/CCPA, and applicable life sciences regulations"
+  },
+  {
+    "id": 16,
+    "name": "Insurance",
+    "description": "Vendor must maintain adequate insurance coverage including general liability (minimum $2M per occurrence), professional liability/E&O (minimum $2M), cyber liability (minimum $5M), and workers compensation as required by law.",
+    "required": true,
+    "risk_level": "medium",
+    "waters_standard": "General liability $2M+; Professional liability $2M+; Cyber liability $5M+; Workers comp per law"
+  },
+  {
+    "id": 17,
+    "name": "Change Order Process",
+    "description": "Any changes to scope, timeline, or fees must be documented via a formal written change order signed by both parties before work commences. Verbal agreements or email approvals are not sufficient.",
+    "required": true,
+    "risk_level": "medium",
+    "waters_standard": "Written change orders signed by both parties before commencement of changed scope"
+  },
+  {
+    "id": 18,
+    "name": "Warranty",
+    "description": "Vendor must warrant that services will be performed in a professional manner consistent with industry standards and that deliverables will conform to agreed specifications for a minimum of 90 days post-delivery.",
+    "required": true,
+    "risk_level": "medium",
+    "waters_standard": "90-day warranty on deliverables; professional standards warranty on services"
+  },
+  {
+    "id": 19,
+    "name": "Dispute Resolution",
+    "description": "Contract must include a structured dispute resolution process: good faith negotiation first, then mediation, then binding arbitration. Litigation should be a last resort.",
+    "required": false,
+    "risk_level": "low",
+    "waters_standard": "Good faith negotiation 30 days; mediation 30 days; binding arbitration; litigation last resort"
+  },
+  {
+    "id": 20,
+    "name": "Entire Agreement / Amendments",
+    "description": "The contract must include an entire agreement clause confirming it supersedes all prior agreements and that amendments must be in writing signed by both parties.",
+    "required": true,
+    "risk_level": "low",
+    "waters_standard": "Entire agreement clause; written amendments only; signed by both parties"
+  }
+]
