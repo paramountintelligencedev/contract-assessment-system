@@ -9,7 +9,7 @@ Two workflows. One prototype. Built locally in Day 1. Deployed to AWS on Day 2.
 
 ---
 
-## Workflow 1 — Vendor Proposal Validator
+## Workflow 1 - Vendor Proposal Validator
 
 ### What it does
 A user uploads a vendor contract, SOW, or proposal (e.g. the Deloitte 150-page document). Claude reads it, extracts all key terms, compares against Waters' standard enterprise requirements checklist, and produces a decision-ready risk report.
