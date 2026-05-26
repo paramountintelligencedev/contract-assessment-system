@@ -21,7 +21,6 @@ from aws_cdk import (
     RemovalPolicy,
     CfnOutput,
     aws_s3 as s3,
-    aws_s3_deployment as s3deploy,
     aws_cloudfront as cloudfront,
     aws_cloudfront_origins as origins,
     aws_lambda as lambda_,
@@ -324,24 +323,11 @@ class WatersContractStack(cdk.Stack):
             )
         )
 
-        # ── 10. Deploy frontend build to S3 ──────────────────────────────────
-        # Requires frontend/dist/ to exist (built by deploy script / CI before cdk deploy)
-        s3deploy.BucketDeployment(
-            self,
-            "FrontendDeployment",
-            sources=[
-                s3deploy.Source.asset(
-                    os.path.join(os.path.dirname(__file__), "..", "..", "frontend", "dist")
-                )
-            ],
-            destination_bucket=frontend_bucket,
-            distribution=distribution,
-            distribution_paths=["/*"],
-            memory_limit=512,
-            cache_control=[
-                s3deploy.CacheControl.from_string("no-cache, no-store, must-revalidate"),
-            ],
-        )
+        # ── 10. Frontend S3 bucket is created above ───────────────────────────
+        # Files are deployed by the CI/CD workflow using `aws s3 sync`
+        # AFTER the frontend is built. BucketDeployment is intentionally NOT
+        # used here because it requires frontend/dist/ to exist at CDK synth
+        # time, which breaks CI pipelines where the build happens after CDK.
 
         # ── 11. Stack outputs ─────────────────────────────────────────────────
         CfnOutput(self, "CloudFrontURL",
