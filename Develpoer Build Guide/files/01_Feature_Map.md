@@ -51,7 +51,7 @@ A user uploads a vendor contract, SOW, or proposal (e.g. the Deloitte 150-page d
 
 ---
 
-## Workflow 2 — Contract Comparison
+## Workflow 2 - Contract Comparison
 
 ### What it does
 A user uploads two vendor contracts for the same type of engagement. Claude reads both, compares them clause by clause, highlights differences, flags which vendor's terms are stronger, and recommends what to negotiate.
