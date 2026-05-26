@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react"
 import axios from "axios"
 import Chat from "../components/Chat"
+import { nameFromFile } from "../utils/nameFromFile"
 
 const PANEL_W  = 420
 const HEADER_H = 71
@@ -11,7 +12,7 @@ const FOCUS_OPTIONS = [
   "Subcontracting", "Insurance", "Confidentiality", "Dispute resolution",
 ]
 
-const API = "http://localhost:8000/api"
+const API = `${import.meta.env.VITE_API_URL ?? ""}/api`
 
 const RISK_MAP = {
   High:   { color: "var(--red)",   bg: "var(--red-bg)",   dot: "#c53030", sort: 0 },
@@ -257,24 +258,45 @@ function buildComparisonContext(r, nameA, nameB) {
   )
 }
 
-function UploadCard({ label, accentColor, file, onFile }) {
+function UploadCard({ label, accentColor, file, onFile, onDropDoc }) {
   const ref = useRef()
+  const [dropHl, setDropHl] = useState(false)
+
+  function onDragOver(e) {
+    if (e.dataTransfer.types.includes("application/x-waters-doc")) {
+      e.preventDefault(); e.dataTransfer.dropEffect = "copy"; setDropHl(true)
+    }
+  }
+  function onDrop(e) {
+    e.preventDefault(); setDropHl(false)
+    const raw = e.dataTransfer.getData("application/x-waters-doc")
+    if (!raw) return
+    try { onDropDoc(JSON.parse(raw)) } catch {}
+  }
+
   return (
-    <div className="card" style={{ padding: "1.5rem", borderTop: `3px solid ${accentColor}` }}>
+    <div className="card" style={{ padding: "1.5rem", borderTop: `3px solid ${accentColor}`, outline: dropHl ? `2px solid ${accentColor}` : "none", outlineOffset: 3, transition: "outline .15s" }}
+      onDragOver={onDragOver} onDragLeave={() => setDropHl(false)} onDrop={onDrop}
+    >
       <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: ".08em", textTransform: "uppercase", color: "var(--muted)", marginBottom: 12 }}>{label}</p>
-      <div className={`upload-zone${file ? " active" : ""}`} onClick={() => ref.current?.click()} style={{ borderColor: file ? accentColor : undefined }}>
+      <div className={`upload-zone${file ? " active" : ""}${dropHl ? " active" : ""}`}
+        onClick={() => ref.current?.click()}
+        style={{ borderColor: dropHl ? accentColor : file ? accentColor : undefined, background: dropHl ? `${accentColor}0d` : undefined }}
+      >
         <input ref={ref} type="file" accept=".pdf,.docx,.txt" style={{ display: "none" }} onChange={e => onFile(e.target.files[0])} />
-        <div style={{ fontSize: 28, opacity: file ? 1 : .45, marginBottom: 8 }}>📄</div>
-        {file
-          ? <><p style={{ fontWeight: 600, color: "var(--w-navy)", fontSize: 13 }}>{file.name}</p><p style={{ fontSize: 11, color: "var(--muted)", marginTop: 3 }}>{(file.size / 1024).toFixed(1)} KB · Click to change</p></>
-          : <><p style={{ fontWeight: 500, color: "var(--w-navy)", fontSize: 13 }}>Click to upload</p><p style={{ fontSize: 11, color: "var(--muted)", marginTop: 3 }}>PDF, DOCX, or TXT</p></>
+        <div style={{ fontSize: 28, opacity: file ? 1 : .45, marginBottom: 8 }}>{dropHl ? "🎯" : "📄"}</div>
+        {dropHl
+          ? <p style={{ fontWeight: 600, color: accentColor, fontSize: 13 }}>Drop to assign</p>
+          : file
+            ? <><p style={{ fontWeight: 600, color: "var(--w-navy)", fontSize: 13 }}>{file.name}</p><p style={{ fontSize: 11, color: "var(--muted)", marginTop: 3 }}>{((file.size || 0) / 1024).toFixed(1)} KB · Click to change</p></>
+            : <><p style={{ fontWeight: 500, color: "var(--w-navy)", fontSize: 13 }}>Click to upload or drag from panel</p><p style={{ fontSize: 11, color: "var(--muted)", marginTop: 3 }}>PDF, DOCX, or TXT</p></>
         }
       </div>
     </div>
   )
 }
 
-export default function Comparison() {
+export default function Comparison({ preloadedDoc }) {
   const [phase, setPhase]               = useState("upload")
   const [fileA, setFileA]               = useState(null)
   const [fileB, setFileB]               = useState(null)
@@ -288,6 +310,16 @@ export default function Comparison() {
   const [clauseWinnerFilter, setClauseWinnerFilter] = useState("all")
   const [letterModal, setLetterModal]   = useState(false)
   const [chatPreFill, setChatPreFill]   = useState("")
+
+  // When user selects a doc from the left panel, pre-fill Vendor A slot
+  const prevDocId = useRef(null)
+  if (preloadedDoc && preloadedDoc.id !== prevDocId.current) {
+    prevDocId.current = preloadedDoc.id
+    if (preloadedDoc.file && phase !== "loading") {
+      setFileA(preloadedDoc.file)
+      setNameA(nameFromFile(preloadedDoc.name))
+    }
+  }
 
   const showChat = chatContext !== ""
 
@@ -304,24 +336,60 @@ export default function Comparison() {
   async function handleSubmit() {
     if (!fileA || !fileB) return
     setPhase("loading"); setError(null)
+
+    const form = new FormData()
+    if (fileA._s3Key) { form.append("s3_key_a", fileA._s3Key) } else { form.append("file_a", fileA) }
+    if (fileB._s3Key) { form.append("s3_key_b", fileB._s3Key) } else { form.append("file_b", fileB) }
+    form.append("vendor_a_name", nameA)
+    form.append("vendor_b_name", nameB)
+    form.append("focus_areas", JSON.stringify(focusAreas))
+
     try {
-      const form = new FormData()
-      form.append("file_a", fileA); form.append("file_b", fileB)
-      form.append("vendor_a_name", nameA); form.append("vendor_b_name", nameB)
-      form.append("focus_areas", JSON.stringify(focusAreas))
-      const res = await axios.post(`${API}/compare`, form)
-      setResult(res.data)
-      setChatContext(buildComparisonContext(res.data, nameA, nameB))
-      setChatSuggestions([
-        `Which vendor has better payment terms?`,
-        `What are the key risks in ${nameA}'s contract?`,
-        `Compare liability caps — which is more favourable?`,
-        `Summarise the most important differences`,
-      ])
-      setClauseWinnerFilter("all")
-      setPhase("results")
+      // ── Step 1: submit job (returns job_id immediately) ───────────────────
+      const submitRes = await fetch(`${API}/compare`, { method: "POST", body: form })
+      if (!submitRes.ok) {
+        const err = await submitRes.json().catch(() => ({}))
+        throw new Error(err.detail || `HTTP ${submitRes.status}`)
+      }
+      const { job_id } = await submitRes.json()
+
+      // ── Step 2: poll until done ───────────────────────────────────────────
+      const MAX_ATTEMPTS = 90   // 90 × 2s = 3 minutes
+      for (let i = 0; i < MAX_ATTEMPTS; i++) {
+        await new Promise(r => setTimeout(r, 2000))
+
+        const pollRes = await fetch(`${API}/compare/${job_id}`)
+        if (!pollRes.ok) {
+          const err = await pollRes.json().catch(() => ({}))
+          throw new Error(err.detail || `Poll failed: HTTP ${pollRes.status}`)
+        }
+
+        const state = await pollRes.json()
+
+        if (state.status === "done") {
+          setResult(state.result)
+          setChatContext(buildComparisonContext(state.result, nameA, nameB))
+          setChatSuggestions([
+            `Which vendor has better payment terms?`,
+            `What are the key risks in ${nameA}'s contract?`,
+            `Compare liability caps — which is more favourable?`,
+            `Summarise the most important differences`,
+          ])
+          setClauseWinnerFilter("all")
+          setPhase("results")
+          return
+        }
+
+        if (state.status === "error") {
+          throw new Error(state.detail || "Comparison failed")
+        }
+        // pending / running — keep polling
+      }
+
+      throw new Error("Timed out waiting for comparison result. Please try again.")
+
     } catch (e) {
-      setError(e?.response?.data?.detail || e?.message || "Unknown error")
+      setError(e.message || "Unknown error")
       setPhase("upload")
     }
   }
@@ -426,8 +494,12 @@ export default function Comparison() {
             </div>
 
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }} className="fade-up-2">
-              <UploadCard label={`${nameA} Contract`} accentColor="#3949ab" file={fileA} onFile={setFileA} />
-              <UploadCard label={`${nameB} Contract`} accentColor="#2e7d32" file={fileB} onFile={setFileB} />
+              <UploadCard label={`${nameA} Contract`} accentColor="#3949ab" file={fileA}
+                onFile={f => { setFileA(f); setNameA(nameFromFile(f.name)) }}
+                onDropDoc={doc => { setFileA({ name: doc.name, size: doc.size, _s3Key: doc.s3Key }); setNameA(nameFromFile(doc.name)) }} />
+              <UploadCard label={`${nameB} Contract`} accentColor="#2e7d32" file={fileB}
+                onFile={f => { setFileB(f); setNameB(nameFromFile(f.name)) }}
+                onDropDoc={doc => { setFileB({ name: doc.name, size: doc.size, _s3Key: doc.s3Key }); setNameB(nameFromFile(doc.name)) }} />
             </div>
 
             <div style={{ display: "flex", gap: 12 }} className="fade-up-2">

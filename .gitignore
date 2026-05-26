@@ -1,44 +1,65 @@
-# Python
+# ── Python ───────────────────────────────────────────────────────────────────
 __pycache__/
 *.py[cod]
 *.pyo
 *.pyd
 .Python
 *.egg-info/
-dist/
 build/
 *.egg
 
-# Virtual environment
+# ── Virtual environments ──────────────────────────────────────────────────────
 backend/venv/
 venv/
 .venv/
 env/
+infra/.venv/
 
-# Environment variables
+# ── Environment / secrets — NEVER commit ─────────────────────────────────────
 .env
 .env.*
 !.env.example
+backend/env
+secret.json
 
-# Node / frontend
+# ── Node / frontend ───────────────────────────────────────────────────────────
 frontend/node_modules/
 frontend/dist/
 frontend/.vite/
 
-# IDE
+# ── CDK / infra ───────────────────────────────────────────────────────────────
+infra/cdk.out/
+infra/cdk-outputs.json
+infra/.cdk.staging/
+
+# ── Lambda layer — built by deploy script, not committed ─────────────────────
+backend/lambda_layer/
+
+# ── Temp / debug files ────────────────────────────────────────────────────────
+*.zip
+lambda_code_extracted/
+lambda_logs.txt
+benchmark.py
+test_*.py
+get_logs.py
+show_prompt.py
+diagnose.py
+tmp_*.json
+
+# ── IDE ───────────────────────────────────────────────────────────────────────
 .vscode/
 .idea/
 *.swp
 *.swo
 
-# OS
+# ── OS ────────────────────────────────────────────────────────────────────────
 .DS_Store
 Thumbs.db
 
-# Logs
+# ── Logs ─────────────────────────────────────────────────────────────────────
 *.log
 
-# Sensitive files — never commit
+# ── Sensitive build guide files ───────────────────────────────────────────────
 "Develpoer Build Guide/files/Claude Api Key.txt"
 Develpoer Build Guide/files/Claude*
 .claude/

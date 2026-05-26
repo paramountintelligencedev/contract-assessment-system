@@ -2,7 +2,7 @@ import { useState, useRef } from "react"
 import axios from "axios"
 import Chat from "../components/Chat"
 
-const API = "http://localhost:8000/api"
+const API = `${import.meta.env.VITE_API_URL ?? ""}/api`
 
 const STATUS_MAP = {
   GREEN: { cls: "badge-green", label: "Compliant",     dot: "var(--green)", color: "var(--green)" },
@@ -315,41 +315,187 @@ function FixedChatPanel({ contractText, contractName, suggestions }) {
   )
 }
 
+// ── Streaming progress indicator ─────────────────────────────────────────────
+const STREAM_STEPS = [
+  { key: "parsing",   label: "Parsing document"  },
+  { key: "prompting", label: "Building prompt"    },
+  { key: "streaming", label: "Claude reviewing"   },
+]
+
+function StreamProgress({ step, rawLen }) {
+  return (
+    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 20 }}>
+      {/* Spinner */}
+      <div style={{ position: "relative", width: 80, height: 80 }}>
+        <div style={{ position: "absolute", inset: 0, borderRadius: "50%", border: "3px solid var(--border)" }} />
+        <div style={{ position: "absolute", inset: 0, borderRadius: "50%", border: "3px solid transparent", borderTopColor: "var(--w-teal)", animation: "spin 1s linear infinite" }} />
+        <div style={{ position: "absolute", inset: 8, borderRadius: "50%", border: "3px solid transparent", borderTopColor: "var(--w-blue)", animation: "spin 1.4s linear infinite reverse" }} />
+        <div style={{ position: "absolute", inset: 16, borderRadius: "50%", background: "linear-gradient(135deg, var(--w-teal), var(--w-blue))", display: "flex", alignItems: "center", justifyContent: "center" }}>
+          <span style={{ color: "#fff", fontWeight: 800, fontSize: 13, fontFamily: "Georgia, serif" }}>W</span>
+        </div>
+      </div>
+
+      {/* Step pills */}
+      <div style={{ display: "flex", gap: 6 }}>
+        {STREAM_STEPS.map(({ key, label }, i) => {
+          const stepIdx   = STREAM_STEPS.findIndex(s => s.key === step)
+          const thisIdx   = i
+          const done      = thisIdx < stepIdx
+          const active    = thisIdx === stepIdx
+          return (
+            <span key={key} style={{
+              fontSize: 11, padding: "4px 12px", borderRadius: 20, fontWeight: 600,
+              background: done ? "var(--green-bg)" : active ? "var(--w-navy)" : "var(--surface)",
+              border: `1px solid ${done ? "rgba(0,135,90,.2)" : active ? "transparent" : "var(--border)"}`,
+              color: done ? "var(--green)" : active ? "#fff" : "var(--muted)",
+              animation: active ? "pulse 1.5s ease-in-out infinite" : "none",
+              transition: "all .3s",
+            }}>
+              {done ? "✓ " : ""}{label}
+            </span>
+          )
+        })}
+      </div>
+
+      {/* Live byte counter while streaming */}
+      {step === "streaming" && rawLen > 0 && (
+        <p style={{ fontSize: 11, color: "var(--muted)", fontVariantNumeric: "tabular-nums" }}>
+          Receiving response… {(rawLen / 1024).toFixed(1)} KB
+        </p>
+      )}
+    </div>
+  )
+}
+
 // ── Main component ────────────────────────────────────────────────────────────
-export default function Validator() {
+export default function Validator({ preloadedDoc }) {
   const [phase, setPhase]             = useState("upload")
+  const [streamStep, setStreamStep]   = useState("parsing")
+  const [streamRawLen, setStreamRawLen] = useState(0)
   const [file, setFile]               = useState(null)
+  const [dropHighlight, setDropHighlight] = useState(false)  // drag-from-panel highlight
   const [result, setResult]           = useState(null)
   const [chatContext, setChatContext]  = useState("")
   const [chatSuggestions, setChatSuggestions] = useState([])
   const [clauseFilter, setClauseFilter] = useState("all")
   const [error, setError]             = useState(null)
   const inputRef = useRef()
+  const dropRef  = useRef()
+
+  // When user clicks a doc in the left panel, pre-fill it
+  const prevDocId = useRef(null)
+  if (preloadedDoc && preloadedDoc.id !== prevDocId.current) {
+    prevDocId.current = preloadedDoc.id
+    const f = preloadedDoc.file || null
+    if (f && phase !== "streaming") {
+      setFile(f)
+      setPhase("upload")
+      setResult(null)
+      setError(null)
+    }
+  }
+
+  // ── Accept drag from DocumentLibrary ─────────────────────────────────────
+  function onCenterDragOver(e) {
+    if (e.dataTransfer.types.includes("application/x-waters-doc")) {
+      e.preventDefault()
+      e.dataTransfer.dropEffect = "copy"
+      setDropHighlight(true)
+    }
+  }
+  function onCenterDragLeave() { setDropHighlight(false) }
+  function onCenterDrop(e) {
+    e.preventDefault()
+    setDropHighlight(false)
+    const raw = e.dataTransfer.getData("application/x-waters-doc")
+    if (!raw) return
+    try {
+      const doc = JSON.parse(raw)
+      // doc has { id, name, size, s3Key, localOnly }
+      // We use s3Key for validation — no local File object needed
+      setFile({ name: doc.name, size: doc.size, _s3Key: doc.s3Key })
+      setPhase("upload")
+      setResult(null)
+      setError(null)
+    } catch {}
+  }
 
   const showChat = chatContext !== ""
 
-  // chatContext/chatSuggestions intentionally not cleared — panel stays visible
-  function reset() { setPhase("upload"); setFile(null); setResult(null); setClauseFilter("all"); setError(null) }
+  function reset() {
+    setPhase("upload"); setFile(null); setResult(null)
+    setClauseFilter("all"); setError(null)
+    setStreamStep("parsing"); setStreamRawLen(0)
+  }
 
   async function handleValidate() {
     if (!file) return
-    setPhase("loading"); setError(null)
-    try {
-      const form = new FormData()
+    setPhase("streaming"); setStreamStep("parsing"); setStreamRawLen(0); setError(null)
+
+    const form = new FormData()
+    if (file._s3Key) {
+      // Dragged from panel — file is already in S3
+      form.append("s3_key", file._s3Key)
+    } else if (preloadedDoc?.s3Key && preloadedDoc.file === file) {
+      form.append("s3_key", preloadedDoc.s3Key)
+    } else {
       form.append("file", file)
-      const res = await axios.post(`${API}/validate`, form)
-      setResult(res.data)
-      setChatContext(buildChatContext(file.name, res.data))
-      setChatSuggestions(buildSuggestions(res.data))
-      setPhase("results")
+    }
+
+    try {
+      // ── Step 1: submit job (returns immediately with job_id) ──────────────
+      const submitRes = await fetch(`${API}/validate`, { method: "POST", body: form })
+      if (!submitRes.ok) {
+        const err = await submitRes.json().catch(() => ({}))
+        throw new Error(err.detail || `HTTP ${submitRes.status}`)
+      }
+      const { job_id } = await submitRes.json()
+      setStreamStep("streaming")
+
+      // ── Step 2: poll until done ───────────────────────────────────────────
+      let attempts = 0
+      const MAX_ATTEMPTS = 90   // 90 × 2s = 3 minutes max
+      const POLL_INTERVAL = 2000
+
+      while (attempts < MAX_ATTEMPTS) {
+        await new Promise(r => setTimeout(r, POLL_INTERVAL))
+        attempts++
+
+        const pollRes = await fetch(`${API}/validate/${job_id}`)
+        if (!pollRes.ok) {
+          const err = await pollRes.json().catch(() => ({}))
+          throw new Error(err.detail || `Poll failed: HTTP ${pollRes.status}`)
+        }
+
+        const state = await pollRes.json()
+        setStreamRawLen(Math.round((state.elapsed || 0) * 10))  // reuse as progress indicator
+
+        if (state.status === "done") {
+          setResult(state.result)
+          setChatContext(buildChatContext(file.name, state.result))
+          setChatSuggestions(buildSuggestions(state.result))
+          setPhase("results")
+          return
+        }
+
+        if (state.status === "error") {
+          throw new Error(state.detail || "Claude processing failed")
+        }
+
+        // still pending or running — keep polling
+        if (state.status === "running") setStreamStep("streaming")
+      }
+
+      throw new Error("Timed out waiting for result (3 minutes). Please try again.")
+
     } catch (e) {
-      setError(e?.response?.data?.detail || e?.message || "Unknown error")
+      setError(e.message || "Unknown error")
       setPhase("upload")
     }
   }
 
   // Results prep (safe — only evaluated when result is non-null)
-  const risk       = result ? RISK_META[result.overall_risk] : null
+  const risk       = result ? RISK_META[result.overall_risk] ?? RISK_META.AMBER : null
   const sorted     = result ? [...result.clauses].sort((a, b) => (SORT_ORDER[a.status] ?? 1) - (SORT_ORDER[b.status] ?? 1)) : []
   const statCounts = result ? {
     GREEN: result.clauses.filter(c => c.status === "GREEN").length,
@@ -370,21 +516,34 @@ export default function Validator() {
 
         {/* ── UPLOAD ─────────────────────────────────────────────────────── */}
         {phase === "upload" && (
-          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", minHeight: "60vh", gap: "2rem" }}>
+          <div
+            style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", minHeight: "60vh", gap: "2rem" }}
+            onDragOver={onCenterDragOver}
+            onDragLeave={onCenterDragLeave}
+            onDrop={onCenterDrop}
+          >
             <div className="fade-up" style={{ textAlign: "center" }}>
               <div className="teal-bar" style={{ margin: "0 auto 10px" }} />
               <h2 style={{ fontSize: 28, fontWeight: 700, color: "var(--w-navy)", letterSpacing: "-.02em", marginBottom: 8 }}>Vendor Proposal Validator</h2>
               <p style={{ color: "var(--text-secondary)", fontSize: 14, maxWidth: 480 }}>
-                Upload a vendor contract, SOW, or proposal. Claude will extract key terms and flag issues against Waters' enterprise requirements.
+                Upload a contract, or drag one from the Documents panel on the left.
               </p>
             </div>
-            <div className="card fade-up-2" style={{ padding: "2.5rem", width: "100%", maxWidth: 520 }}>
-              <div className={`upload-zone${file ? " active" : ""}`} onClick={() => inputRef.current?.click()} style={{ marginBottom: "1.75rem", padding: "3rem 2rem" }}>
+            <div className="card fade-up-2" style={{ padding: "2.5rem", width: "100%", maxWidth: 520, outline: dropHighlight ? "2px solid var(--w-teal)" : "none", outlineOffset: 4, transition: "outline .15s" }}>
+              <div
+                className={`upload-zone${file ? " active" : ""}${dropHighlight ? " active" : ""}`}
+                onClick={() => inputRef.current?.click()}
+                style={{ marginBottom: "1.75rem", padding: "3rem 2rem", borderColor: dropHighlight ? "var(--w-teal)" : undefined, background: dropHighlight ? "rgba(0,178,202,.06)" : undefined }}
+              >
                 <input ref={inputRef} type="file" accept=".pdf,.docx,.txt" style={{ display: "none" }} onChange={e => setFile(e.target.files[0])} />
-                <div style={{ fontSize: 44, marginBottom: 12, opacity: file ? 1 : .4 }}>📄</div>
-                {file
-                  ? <><p style={{ fontWeight: 700, color: "var(--w-navy)", fontSize: 16 }}>{file.name}</p><p style={{ fontSize: 12, color: "var(--muted)", marginTop: 6 }}>{(file.size / 1024).toFixed(1)} KB · Click to change</p></>
-                  : <><p style={{ fontWeight: 600, color: "var(--w-navy)", fontSize: 15 }}>Click to upload contract</p><p style={{ fontSize: 12, color: "var(--muted)", marginTop: 6 }}>PDF, DOCX, or TXT · Up to 10 MB</p></>
+                <div style={{ fontSize: 44, marginBottom: 12, opacity: file ? 1 : .4 }}>
+                  {dropHighlight ? "🎯" : "📄"}
+                </div>
+                {dropHighlight
+                  ? <p style={{ fontWeight: 700, color: "var(--w-teal)", fontSize: 15 }}>Drop to select this contract</p>
+                  : file
+                    ? <><p style={{ fontWeight: 700, color: "var(--w-navy)", fontSize: 16 }}>{file.name}</p><p style={{ fontSize: 12, color: "var(--muted)", marginTop: 6 }}>{((file.size || 0) / 1024).toFixed(1)} KB · Click to change</p></>
+                    : <><p style={{ fontWeight: 600, color: "var(--w-navy)", fontSize: 15 }}>Click to upload or drag from panel</p><p style={{ fontSize: 12, color: "var(--muted)", marginTop: 6 }}>PDF, DOCX, or TXT · Up to 10 MB</p></>
                 }
               </div>
               <button className="btn-primary" onClick={handleValidate} disabled={!file} style={{ width: "100%", justifyContent: "center", padding: "13px 28px", fontSize: 14 }}>
@@ -396,25 +555,20 @@ export default function Validator() {
           </div>
         )}
 
-        {/* ── LOADING ─────────────────────────────────────────────────────── */}
-        {phase === "loading" && (
+        {/* ── STREAMING / POLLING ─────────────────────────────────────── */}
+        {phase === "streaming" && (
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", minHeight: 400, gap: 24 }}>
-            <div style={{ position: "relative", width: 80, height: 80 }}>
-              <div style={{ position: "absolute", inset: 0, borderRadius: "50%", border: "3px solid var(--border)" }} />
-              <div style={{ position: "absolute", inset: 0, borderRadius: "50%", border: "3px solid transparent", borderTopColor: "var(--w-teal)", animation: "spin 1s linear infinite" }} />
-              <div style={{ position: "absolute", inset: 8, borderRadius: "50%", border: "3px solid transparent", borderTopColor: "var(--w-blue)", animation: "spin 1.4s linear infinite reverse" }} />
-              <div style={{ position: "absolute", inset: 16, borderRadius: "50%", background: "linear-gradient(135deg, var(--w-teal), var(--w-blue))", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <span style={{ color: "#fff", fontWeight: 800, fontSize: 13, fontFamily: "Georgia, serif" }}>W</span>
-              </div>
-            </div>
+            <StreamProgress step={streamStep} rawLen={streamRawLen} />
             <div style={{ textAlign: "center" }}>
-              <p style={{ fontWeight: 700, color: "var(--w-navy)", fontSize: 16, marginBottom: 6 }}>Claude is reviewing your contract</p>
+              <p style={{ fontWeight: 700, color: "var(--w-navy)", fontSize: 16, marginBottom: 6 }}>
+                Claude is reviewing your contract
+              </p>
               <p style={{ color: "var(--muted)", fontSize: 13 }}>{file?.name}</p>
-            </div>
-            <div style={{ display: "flex", gap: 6 }}>
-              {["Parsing document", "Extracting clauses", "Assessing risk"].map((step, i) => (
-                <span key={step} style={{ fontSize: 11, padding: "4px 12px", borderRadius: 20, background: "var(--surface)", border: "1px solid var(--border)", color: "var(--muted)", fontWeight: 500, animation: `pulse 1.5s ${i * .3}s ease-in-out infinite` }}>{step}</span>
-              ))}
+              {streamRawLen > 0 && (
+                <p style={{ color: "var(--w-teal)", fontSize: 12, marginTop: 8, fontVariantNumeric: "tabular-nums", fontWeight: 600 }}>
+                  {(streamRawLen / 10).toFixed(1)}s elapsed — large documents take 30–60s
+                </p>
+              )}
             </div>
           </div>
         )}

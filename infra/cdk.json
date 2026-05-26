@@ -1,0 +1,23 @@
+{
+  "app": "python app.py",
+  "watch": {
+    "include": ["**"],
+    "exclude": [
+      "README.md",
+      "cdk*.json",
+      "**/__pycache__",
+      "**/*.pyc",
+      "**/*.egg-info",
+      "**/node_modules",
+      "**/.venv"
+    ]
+  },
+  "context": {
+    "@aws-cdk/aws-lambda:recognizeLayerVersion": true,
+    "@aws-cdk/core:checkSecretUsage": true,
+    "@aws-cdk/aws-cloudfront-origins:useOriginAccessControl": true,
+    "@aws-cdk/aws-s3:serverAccessLogsUseBucketPolicy": true,
+    "@aws-cdk/aws-apigateway:disableCloudWatchRole": false,
+    "aws-cdk:enableDiffNoFail": true
+  }
+}

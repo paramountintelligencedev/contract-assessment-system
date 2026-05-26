@@ -1,9 +1,23 @@
+# Web framework + Lambda adapter
 fastapi>=0.111.0
 uvicorn>=0.30.0
+mangum>=0.17.0
+
+# File upload support
 python-multipart>=0.0.9
+
+# AI
 anthropic>=0.28.0
+
+# Document parsing
 PyPDF2>=3.0.1
 python-docx>=1.1.0
+
+# Config
 python-dotenv>=1.0.1
+
+# Data validation
 pydantic>=2.7.1
-mangum==0.17.0
+
+# AWS SDK (Secrets Manager, S3) — pre-installed on Lambda but listed for local dev
+boto3>=1.34.0
