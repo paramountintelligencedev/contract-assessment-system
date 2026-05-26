@@ -4,15 +4,13 @@ name: Deploy to AWS
 on:
   push:
     branches:
-      - main          # auto-deploy on every push to main
-  workflow_dispatch:  # manual trigger from GitHub Actions UI
+      - main
+  workflow_dispatch:
 
-# ── Cancel in-progress deploy if a newer push arrives ────────────────────────
 concurrency:
   group: deploy-production
   cancel-in-progress: true
 
-# ── Single deploy job ─────────────────────────────────────────────────────────
 jobs:
   deploy:
     name: Build & Deploy
@@ -24,7 +22,6 @@ jobs:
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       AWS_DEFAULT_REGION:    us-east-1
       STACK_NAME:            WatersContractStack
-      # Use Node 24 for all JS actions (avoids Node 20 deprecation warnings)
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
     steps:
@@ -60,8 +57,6 @@ jobs:
         run: pip install -r infra/requirements.txt
 
       # ── 6. Build Lambda layer ────────────────────────────────────────────────
-      # Compiled for Lambda's manylinux2014_x86_64 runtime — not the runner OS.
-      # pip cache means this only re-runs when requirements.txt changes.
       - name: Build Lambda dependency layer
         run: |
           mkdir -p backend/lambda_layer/python
@@ -74,37 +69,30 @@ jobs:
             --upgrade \
             -r backend/requirements.txt
 
-      # ── 7. CDK bootstrap (no-op if already done) ─────────────────────────────
+      # ── 7. CDK bootstrap ─────────────────────────────────────────────────────
+      # --quiet flag removed — not supported in all CDK versions
       - name: CDK bootstrap
         run: |
           ACCOUNT=$(aws sts get-caller-identity --query Account --output text)
-          cdk bootstrap aws://$ACCOUNT/us-east-1 --quiet
+          cdk bootstrap aws://$ACCOUNT/us-east-1
         working-directory: infra
 
-      # ── 8. Build placeholder frontend (needed for first-ever deploy) ──────────
+      # ── 8. First CDK deploy (infra only, placeholder frontend) ───────────────
       # CDK BucketDeployment requires frontend/dist/ to exist at synth time.
-      # On first deploy there is no real build yet, so we create a placeholder.
-      # The real build (step 11) overwrites this and re-deploys.
+      # We create a placeholder here; the real build replaces it in step 12.
       - name: Create placeholder frontend dist
         run: |
           mkdir -p frontend/dist
-          if [ ! -f frontend/dist/index.html ]; then
-            echo "<html><body>Deploying...</body></html>" > frontend/dist/index.html
-          fi
+          echo "<html><body>Deploying...</body></html>" > frontend/dist/index.html
 
-      # ── 9. Deploy CDK stack ───────────────────────────────────────────────────
-      # Creates/updates: Lambda, API Gateway, S3, CloudFront, Secrets Manager, IAM.
-      # Outputs written to infra/cdk-outputs.json for subsequent steps.
-      - name: Deploy CDK stack
+      - name: Deploy CDK stack (first pass — creates infra + gets CloudFront URL)
         run: |
           cdk deploy $STACK_NAME \
             --require-approval never \
             --outputs-file cdk-outputs.json
         working-directory: infra
 
-      # ── 10. Read CDK outputs ──────────────────────────────────────────────────
-      # Reads CloudFrontURL, FrontendBucketName, CloudFrontDistributionId
-      # directly from cdk-outputs.json — no hardcoded values.
+      # ── 9. Read CloudFront URL from CDK outputs ───────────────────────────────
       - name: Read CDK outputs
         id: cdk
         run: |
@@ -129,56 +117,56 @@ jobs:
           print(f"Distribution ID:  {dist_id}")
           PYEOF
 
-      # ── 11. Install frontend deps ─────────────────────────────────────────────
+      # ── 10. Install frontend deps ─────────────────────────────────────────────
       - name: Install frontend dependencies
         run: npm ci
         working-directory: frontend
 
-      # ── 12. Build React app ───────────────────────────────────────────────────
-      # VITE_API_URL baked in at build time → all /api/* calls go through
-      # CloudFront → API Gateway → Lambda (single domain, no CORS issues).
+      # ── 11. Build React app with real CloudFront URL ──────────────────────────
       - name: Build React frontend
         run: npm run build
         working-directory: frontend
         env:
           VITE_API_URL: ${{ steps.cdk.outputs.cloudfront_url }}
 
-      # ── 13. Sync frontend to S3 ───────────────────────────────────────────────
-      # Hashed JS/CSS assets: 1-year cache (Vite content-hashes filenames).
-      # HTML files: no-cache (must always be fresh so new asset hashes load).
+      # ── 12. Second CDK deploy (syncs real frontend build to S3) ──────────────
+      - name: Deploy CDK stack (second pass — syncs real frontend)
+        run: |
+          cdk deploy $STACK_NAME \
+            --require-approval never \
+            --outputs-file cdk-outputs.json
+        working-directory: infra
+
+      # ── 13. Sync frontend directly to S3 (faster than CDK BucketDeployment) ──
       - name: Sync frontend to S3
         run: |
+          # Hashed assets — cache 1 year (Vite content-hashes filenames)
           aws s3 sync frontend/dist/ s3://${{ steps.cdk.outputs.frontend_bucket }}/ \
             --delete \
             --exclude "*.html" \
             --cache-control "public, max-age=31536000, immutable"
 
+          # HTML — no cache (always fresh)
           aws s3 sync frontend/dist/ s3://${{ steps.cdk.outputs.frontend_bucket }}/ \
             --exclude "*" \
             --include "*.html" \
             --cache-control "no-cache, no-store, must-revalidate"
 
       # ── 14. Invalidate CloudFront cache ───────────────────────────────────────
-      # Only HTML needs invalidation — JS/CSS filenames change with every build.
       - name: Invalidate CloudFront cache
         run: |
           aws cloudfront create-invalidation \
             --distribution-id ${{ steps.cdk.outputs.distribution_id }} \
-            --paths "/*.html" "/index.html"
-          echo "Cache invalidated for ${{ steps.cdk.outputs.distribution_id }}"
+            --paths "/*"
+          echo "Cache invalidated"
 
-      # ── 15. Deployment summary ────────────────────────────────────────────────
+      # ── 15. Summary ───────────────────────────────────────────────────────────
       - name: Deployment summary
         run: |
-          echo ""
           echo "========================================================"
           echo "  Deployment complete"
+          echo "  Live URL: ${{ steps.cdk.outputs.cloudfront_url }}"
           echo "========================================================"
-          echo ""
-          echo "  Live URL:  ${{ steps.cdk.outputs.cloudfront_url }}"
-          echo ""
-          echo "  Health check:"
           curl -sf "${{ steps.cdk.outputs.cloudfront_url }}/api/health" \
-            && echo "  API is healthy" \
-            || echo "  (warming up — check again in 30s)"
-          echo ""
+            && echo "  API healthy" \
+            || echo "  API warming up..."
